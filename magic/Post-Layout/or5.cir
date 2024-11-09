@@ -11,11 +11,16 @@
 Vdd vdd gnd 'SUPPLY'
 
 * Test Signals
-Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
-Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
-Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
-Va d gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 25n 50n)
-Ve e gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 20n 40n)
+* Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
+* Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
+* Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
+* Va d gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 25n 50n)
+Vd b gnd DC 0
+vb c gnd DC 0
+Vc d gnd DC 0
+Va a gnd DC 0
+
+Ve e gnd PULSE(0 'SUPPLY' 100n 0.001n 0.01n 100ns 200n)
 
 
 * SPICE3 file created from or5.ext - technology: scmos

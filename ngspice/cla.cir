@@ -12,7 +12,6 @@
 .include or5modular.cir
 .include TSMC_180nm.txt
 
-
 .param SUPPLY=1.8
 .param LAMBDA=0.09u
 .param width_P={40*LAMBDA}
@@ -22,18 +21,46 @@
 * Power Supply for the circuit
 Vdd vdd gnd 'SUPPLY'
 
-
 * Input Signals
+* for testing
+* Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
+* Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+* Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
+* Va1 a1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 10n 20n)    
+* Vb1 b1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 30n 60n)    
+* Va2 a2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 10n 20n)   
+* Vb2 b2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 30n 60n)   
+* Va3 a3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 10n 20n)   
+* Vb3 b3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 30n 60n)   
+* Vcin cin gnd DC 0         
+
+* Input Signals for delay measurement
+*  rising
+* Vclk clk gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)  
+* Va0 a0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+* Vb0 b0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+* Va1 a1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+* Vb1 b1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+* Va2 a2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vb2 b2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Va3 a3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vb3 b3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vcin cin gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)
+
+
+* Input Signals for delay measurement
+*  falling
 Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
 Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
-Va1 a1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 10n 20n)    
-Vb1 b1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 30n 60n)    
-Va2 a2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 10n 20n)   
-Vb2 b2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 30n 60n)   
-Va3 a3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 10n 20n)   
-Vb3 b3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 30n 60n)   
-Vcin cin gnd DC 0                                
+Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
+
 
 * Step 1: Compute Generate (G_i) Signals using AND gates
 Xand0 b0 a0 g0 vdd gnd and
@@ -54,8 +81,6 @@ Xxor2 a2 b2 p2 vdd gnd xor
  * P2 = A2 XOR B2
 Xxor3 a3 b3 p3 vdd gnd xor  
 * P3 = A3 XOR B3
-
-
 
 * Recursive computation
 * * Step 3: Compute Carry (C_i) Signals
@@ -83,8 +108,8 @@ Xand4 p0 cin pocin vdd gnd and
 Xor0 g0 pocin c1 vdd gnd or
 * C2 = G1 + (P1 * G0) + P1P0C0
 Xand6 p1 g0 p1g0 vdd gnd and
-Xand5 p1 p0 cin p1c1c0 vdd gnd and3
-Xor1 g1 p1c1c0 p1g0 c2 vdd gnd or3
+Xand5 p1 p0 cin p1p0c0 vdd gnd and3
+Xor1 g1 p1p0c0 p1g0 c2 vdd gnd or3
 * C3 = G2 + (P2 * G1) + P2P1G0 + P2P1P0C0
 Xand7 p2 g1 p2g1 vdd gnd and
 Xand8 p2 p1 g0 p2p1g0 vdd gnd and3
@@ -93,11 +118,10 @@ Xor2 g2 p2g1 p2p1g0 p2p1p0c0 c3 vdd gnd or4
 
 * C4 = G3 + (P3 * G2) + P3P2G1 + P3P2P1G0 + P3P2P1P0C0
 Xand10 p3 g2 p3g2 vdd gnd and
-Xand11 p3 p2 g1 p3g2g1 vdd gnd and3
+Xand11 p3 p2 g1 p3p2g1 vdd gnd and3
 Xand12 p3 p2 p1 g0 p3p2p1g0 vdd gnd and4
 Xand13 p3 p2 p1 p0 cin p3p2p1p0c0 vdd gnd and5
 Xor3  g3 p3g2 p3p2g1 p3p2p1g0 p3p2p1p0c0 c4 vdd gnd or5
-
 
 * Step 4: Compute Sum (S_i) Outputs
 * The sum is computed by XORing the propagate and carry-in at each position
@@ -109,6 +133,32 @@ Xsum2 p2 c2 s2 vdd gnd xor
  * S2 = P2 XOR C2
 Xsum3 p3 c3 s3 vdd gnd xor   
  * S3 = P3 XOR C3
+
+
+
+
+* * RISING DELAY MEASUREMENT
+* * Measure the delay for the final carry-out signal (C4)
+* .measure tran delay_C4 TRIG V(a0) VAL=0.9 RISE=1 TARG V(c4) VAL=0.9 RISE=1
+
+* * Measure the delay for each sum signal
+* .measure tran delay_S0 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s0) VAL=0.9 RISE=1
+* .measure tran delay_S1 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s1) VAL=0.9 RISE=1
+* .measure tran delay_S2 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s2) VAL=0.9 RISE=1
+* .measure tran delay_S3 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s3) VAL=0.9 RISE=1
+
+
+* FALLING DELAY MEASUREMENT
+* Measure the delay for the final carry-out signal (C4)
+.measure tran delay_C4 TRIG V(a0) VAL=0.1 FALL=1 TARG V(c4) VAL=0.1 FALL=1
+
+* Measure the delay for each sum signal
+.measure tran delay_S0 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s0) VAL=0.1 FALL=1
+.measure tran delay_S1 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s1) VAL=0.1 FALL=1
+.measure tran delay_S2 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s2) VAL=0.1 FALL=1
+.measure tran delay_S3 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s3) VAL=0.1 FALL=1
+
+
 
 * Simulation Commands
 * The .control section performs a transient analysis and plots the results.
@@ -124,13 +174,20 @@ Xsum3 p3 c3 s3 vdd gnd xor
   set color7 = chocolate   
   set color8 = chocolate
   set color9 = blueviolet
-  set color10 = cadetblue        
-  tran 1n 160n
-  plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+g0 20+g1 22+g2 24+g3   
-  plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+p0 20+p1 22+p2 24+p3                      
-  plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
-                   
-  plot s0 2+s1 4+s2 6+s3           
+  set color10 = cadetblue
+  * for testing        
+  * tran 1n 160n
+  * for delay  
+  tran 0.001n 20n 
+  * plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+g0 20+g1 22+g2 24+g3   
+  * plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+p0 20+p1 22+p2 24+p3                      
+  * plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
+    plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+s0 22+s1 24+s2 26+s3   
+        plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+c3 22+c2 24+c1 26+cin 
+
+
+  * plot s0 2+s1 4+s2 6+s3    
+
 .endc
 
 * End of Circuit Definition
