@@ -1,0 +1,15 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and3.v,,AND_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and3.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and4.v,,AND3_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and4.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and5.v,,AND4_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and5.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or.v,,AND5_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/cla.v,1731131479,verilog,,,,cla,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or3.v,,OR_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or3.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or4.v,,OR3_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or4.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or5.v,,OR4_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or5.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/xor.v,,OR5_gate,,,,,,,,
+C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/xor.v,1731130452,verilog,,C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/cla.v,,XOR_GATE,,,,,,,,

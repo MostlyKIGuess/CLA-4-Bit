@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../and.v" \
+"../../../../../and3.v" \
+"../../../../../and4.v" \
+"../../../../../and5.v" \
+"../../../../../or.v" \
+"../../../../../or3.v" \
+"../../../../../or4.v" \
+"../../../../../or5.v" \
+"../../../../../xor.v" \
+"../../../../../cla.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

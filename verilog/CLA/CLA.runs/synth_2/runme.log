@@ -1,0 +1,339 @@
+
+*** Running vivado
+    with args -log fullcircuitwithdff.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fullcircuitwithdff.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source fullcircuitwithdff.tcl -notrace
+Command: synth_design -top fullcircuitwithdff -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19716 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 943.980 ; gain = 234.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fullcircuitwithdff' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/fullcircuitwithdff.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/dff.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/dff.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/cla.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AND_gate' (2#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and.v:1]
+INFO: [Synth 8-6157] synthesizing module 'XOR_GATE' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/xor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'XOR_GATE' (3#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/xor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OR_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OR_gate' (4#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND3_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and3.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AND3_gate' (5#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and3.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OR3_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or3.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OR3_gate' (6#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or3.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND4_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AND4_gate' (7#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OR4_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OR4_gate' (8#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND5_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AND5_gate' (9#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and5.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OR5_gate' [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OR5_gate' (10#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla' (11#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/cla.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fullcircuitwithdff' (12#1) [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/fullcircuitwithdff.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.992 ; gain = 307.320
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.992 ; gain = 307.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.992 ; gain = 307.320
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.992 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'A[3]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'A[2]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'A[1]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'A[0]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B[3]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B[2]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B[1]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B[0]'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_rxd'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_txd'. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fullcircuitwithdff_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fullcircuitwithdff_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1106.855 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1106.855 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	                1 Bit    Registers := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dff 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module XOR_GATE 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1106.855 ; gain = 397.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT3 |     2|
+|3     |LUT5 |     4|
+|4     |FDRE |    13|
+|5     |IBUF |    10|
+|6     |OBUF |     5|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    35|
+|2     |  dff_A0 |dff    |     5|
+|3     |  dff_A1 |dff_0  |     1|
+|4     |  dff_A2 |dff_1  |     1|
+|5     |  dff_A3 |dff_2  |     1|
+|6     |  dff_B0 |dff_3  |     2|
+|7     |  dff_B1 |dff_4  |     1|
+|8     |  dff_B2 |dff_5  |     2|
+|9     |  dff_B3 |dff_6  |     1|
+|10    |  dff_C4 |dff_7  |     1|
+|11    |  dff_S0 |dff_8  |     1|
+|12    |  dff_S1 |dff_9  |     1|
+|13    |  dff_S2 |dff_10 |     1|
+|14    |  dff_S3 |dff_11 |     1|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1107.676 ; gain = 308.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1107.676 ; gain = 398.004
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1119.715 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1125.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 10 Warnings, 10 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1125.500 ; gain = 699.809
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1125.500 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.runs/synth_2/fullcircuitwithdff.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fullcircuitwithdff_utilization_synth.rpt -pb fullcircuitwithdff_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  9 15:41:33 2024...

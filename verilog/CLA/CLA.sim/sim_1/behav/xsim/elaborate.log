@@ -1,0 +1,23 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 160def1ea7d64be5b88e504b2d93d6ab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cla_behav xil_defaultlib.cla xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AND_gate
+Compiling module xil_defaultlib.XOR_GATE
+Compiling module xil_defaultlib.OR_gate
+Compiling module xil_defaultlib.AND3_gate
+Compiling module xil_defaultlib.OR3_gate
+Compiling module xil_defaultlib.AND4_gate
+Compiling module xil_defaultlib.OR4_gate
+Compiling module xil_defaultlib.AND5_gate
+Compiling module xil_defaultlib.OR5_gate
+Compiling module xil_defaultlib.cla
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cla_behav

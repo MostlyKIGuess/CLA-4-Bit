@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND3_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND4_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/and5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND5_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR3_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR4_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/or5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR5_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/xor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/cla.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Krish/Desktop/College/VLSI/CLA-4-Bit/verilog/CLA/CLA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
