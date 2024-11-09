@@ -1,0 +1,53 @@
+* SPICE3 file created from and4.ext - technology: scmos
+
+.option scale=1u
+
+M1000 ybar b vdd w_n87_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 ybar d vdd w_n153_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1002 ybar a vdd w_n120_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1003 a_n64_n88# d gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1004 ybar c a_n64_n50# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1005 a_n64_n50# b a_n64_n69# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1006 a_n64_n69# a a_n64_n88# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 ybar c vdd w_n54_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 y ybar vdd w_n16_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1009 y ybar gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 w_n16_0# y 1.88f
+C1 w_n16_0# vdd 1.128f
+C2 w_n16_0# ybar 1.014f
+C3 w_n54_0# vdd 1.128f
+C4 w_n54_0# ybar 3.59f
+C5 w_n87_0# vdd 1.128f
+C6 w_n87_0# ybar 3.59f
+C7 w_n120_0# vdd 1.128f
+C8 w_n54_0# c 1.014f
+C9 w_n120_0# ybar 3.59f
+C10 w_n153_0# vdd 1.128f
+C11 w_n153_0# ybar 2.45f
+C12 w_n87_0# b 1.014f
+C13 w_n120_0# a 1.014f
+C14 c ybar 0.19f
+C15 b ybar 0.19f
+C16 w_n153_0# d 1.014f
+C17 a ybar 0.19f
+C18 a_n64_n88# 0 1.316f **FLOATING
+C19 a_n64_n69# 0 1.316f **FLOATING
+C20 a_n64_n50# 0 1.316f **FLOATING
+C21 gnd 0 14.193999f **FLOATING
+C22 y 0 4.324f **FLOATING
+C23 vdd 0 45.260998f **FLOATING
+C24 ybar 0 18.744001f **FLOATING
+C25 c 0 19.631f **FLOATING
+C26 b 0 23.626f **FLOATING
+C27 a 0 31.804f **FLOATING
+C28 d 0 44.682f **FLOATING

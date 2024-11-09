@@ -1,0 +1,36 @@
+* 2x1 Multiplexer with TSMC 180nm Technology
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Inputs and Select Line
+Vin0 in0 gnd PULSE(0 'SUPPLY' 0 1n 1n 5n 10n)
+Vin1 in1 gnd PULSE(0 'SUPPLY' 5n 1n 1n 5n 10n)
+Vsel sel gnd PULSE(0 'SUPPLY' 2.5n 1n 1n 5n 10n)
+
+* 2x1 MUX Implementation
+* CMOSP Transistors
+M1 out in0 sel vdd vdd CMOSP W=width_P L=LAMBDA
+M2 out in1 nsel vdd vdd CMOSP W=width_P L=LAMBDA
+
+* CMOSN Transistors
+M3 out in0 sel gnd gnd CMOSN W=width_N L=LAMBDA
+M4 out in1 nsel gnd gnd CMOSN W=width_N L=LAMBDA
+
+* Inverter for Select Complement
+M5 nsel sel vdd vdd CMOSP W=width_P L=LAMBDA
+M6 nsel sel gnd gnd CMOSN W=width_N L=LAMBDA
+
+* Simulation Controls
+.control
+  tran 1n 20n
+  plot out
+.endc
+
+.end

@@ -1,0 +1,56 @@
+* 4-Input-OR Testing Code
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Test Signals
+Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
+Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
+Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
+Va d gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 25n 50n)
+
+* 4-Input-OR Gate Subcircuit
+.subckt or4 a b c d y vdd gnd
+    
+
+    * 4 input nor
+    Mn1 ybar a gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mn2 ybar b gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mn3 ybar c gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mn4 ybar d gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mp1 ybar a z vdd CMOSP L={2*LAMBDA} W={4*width_P} AS={5*4*width_P*LAMBDA} PS={10*LAMBDA+2*4*width_P} AD={5*4*width_P*LAMBDA} PD={10*LAMBDA+2*4*width_P}
+    Mp2 z b e vdd CMOSP L={2*LAMBDA} W={4*width_P} AS={5*4*width_P*LAMBDA} PS={10*LAMBDA+2*4*width_P} AD={5*4*width_P*LAMBDA} PD={10*LAMBDA+2*4*width_P}
+    Mp3 e c x vdd CMOSP L={2*LAMBDA} W={4*width_P} AS={5*4*width_P*LAMBDA} PS={10*LAMBDA+2*4*width_P} AD={5*4*width_P*LAMBDA} PD={10*LAMBDA+2*4*width_P}
+    Mp4 x d vdd vdd CMOSP L={2*LAMBDA} W={4*width_P} AS={5*4*width_P*LAMBDA} PS={10*LAMBDA+2*4*width_P} AD={5*4*width_P*LAMBDA} PD={10*LAMBDA+2*4*width_P}
+        * inverter
+    Mp5 y ybar vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    Mn5 y ybar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+.ends or4
+
+
+
+* Instantiate the OR Gate
+Xor4 a b c d out vdd gnd or4
+
+.control
+  set hcopypscolor = 1
+  set color0 = white
+  set color1 = black
+  set color2 = red
+  set color3 = blue
+  set color4 = brown
+  set color5 = magenta
+  set color6 = cyan
+  set color7 = green
+  tran 1n 200n
+    plot a 2+b 4+c 6+d 8+out
+.endc
+
+

@@ -1,0 +1,42 @@
+* SPICE3 file created from or3.ext - technology: scmos
+
+.option scale=1u
+
+M1000 ybar b gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1001 ybar a gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1002 ybar c gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1003 ybar c a_n75_7# w_n81_1# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1004 y ybar vdd w_n16_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1005 a_n75_47# b a_n75_7# w_n81_34# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1006 vdd a a_n75_47# w_n81_69# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 y ybar gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 a_n75_7# w_n81_34# 1.128f
+C1 w_n81_1# ybar 1.88f
+C2 a_n75_7# w_n81_1# 2.444f
+C3 vdd w_n81_69# 1.88f
+C4 w_n81_69# a 1.482f
+C5 w_n16_0# ybar 1.014f
+C6 c w_n81_1# 2.312f
+C7 w_n81_69# a_n75_47# 1.41f
+C8 w_n81_34# a_n75_47# 1.41f
+C9 b w_n81_34# 1.482f
+C10 y w_n16_0# 1.88f
+C11 w_n16_0# vdd 1.128f
+C12 ybar gnd 1.616f
+C13 gnd 0 16.121f **FLOATING
+C14 y 0 4.324f **FLOATING
+C15 c 0 8.299999f **FLOATING
+C16 a_n75_7# 0 4.888f **FLOATING
+C17 b 0 14.034f **FLOATING
+C18 ybar 0 21.439001f **FLOATING
+C19 a_n75_47# 0 2.585f **FLOATING
+C20 a 0 25.962f **FLOATING
+C21 vdd 0 15.228001f **FLOATING

@@ -1,0 +1,86 @@
+* Positive-Edge-Triggered D Flip-Flop - NAND-based design
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Test Signals
+Vclk clk gnd PULSE(0 'SUPPLY' 0 1n 1n 10n 20n)
+Vd d_in gnd PULSE(0 'SUPPLY' 10n 1n 1n 10n 40n)
+
+* NAND Gate Subcircuit
+.subckt nand a b y vdd gnd
+  Mp1 y a vdd vdd CMOSP W={width_P} L={LAMBDA}
+  Mp2 y b vdd vdd CMOSP W={width_P} L={LAMBDA}
+  Mn1 y a n1 gnd CMOSN W={width_N} L={LAMBDA}
+  Mn2 n1 b gnd gnd CMOSN W={width_N} L={LAMBDA}
+.ends nand
+
+* Three Input NAND Gate Subcircuit
+.subckt nand3 a b c y vdd gnd
+  Mp1 y a vdd vdd CMOSP W={width_P} L={LAMBDA}
+  Mp2 y b vdd vdd CMOSP W={width_P} L={LAMBDA}
+  Mp3 y c vdd vdd CMOSP W={width_P} L={LAMBDA}
+  Mn1 y a n1 gnd CMOSN W={width_N} L={LAMBDA}
+  Mn2 n1 b n2 gnd CMOSN W={width_N} L={LAMBDA}
+  Mn3 n2 c gnd gnd CMOSN W={width_N} L={LAMBDA}
+.ends nand3
+
+* D Flip-Flop Subcircuit using NAND gates
+.subckt dff d clk q qbar vdd gnd
+  * nand gate for Z
+  Xnand1 d y z vdd gnd nand
+  * nand gate for w
+  Xnand2 x z w vdd gnd nand
+  * nand gate for x
+  Xnand3 w clk x vdd gnd nand
+  * nand gate for y
+  Xnand4 x clk z y vdd gnd nand3
+  * nand for qbar
+  Xnand5 y q qbar vdd gnd nand
+  * nand for q
+  Xnand6 x qbar q vdd gnd nand
+.ends dff
+
+* Instantiate the D Flip-Flop
+Xdff0 d_in clk q qbar vdd gnd dff
+
+.control
+  set hcopypscolor = 1
+  set color0 = white
+  set color1 = black
+  set color2 = red
+  set color3 = blue
+  set color4 = green
+  set color5 = brown
+  set color6 = magenta
+  set color7 = cyan
+
+  tran 1n 200n
+  plot v(clk) v(d_in)+2 v(q)+4 v(qbar)+6
+
+  * Measure propagation delay from D to Q
+  meas tran tpd_d_q_rise TRIG v(d_in) VAL=0.9 RISE=1 TARG v(q) VAL=0.9 RISE=1
+  meas tran tpd_d_q_fall TRIG v(d_in) VAL=0.9 FALL=1 TARG v(q) VAL=0.9 FALL=1
+  let delay_d_q = abs((tpd_d_q_rise + tpd_d_q_fall)/2)
+  print delay_d_q
+
+  * Measure rise and fall times of Q
+  meas tran tr_q TRIG v(q) VAL=0.9 RISE=1 TARG v(q) VAL=1.8 RISE=1
+  meas tran tf_q TRIG v(q) VAL=1.8 FALL=1 TARG v(q) VAL=0.9 FALL=1
+  print tr_q tf_q
+
+  * Measure setup and hold times
+  meas tran t_setup TRIG v(clk) VAL=0.9 RISE=1 TARG v(d_in) VAL=0.9 FALL=1
+  meas tran t_hold TRIG v(clk) VAL=0.9 RISE=1 TARG v(d_in) VAL=0.9 RISE=1
+  print t_setup t_hold
+
+.endc
+
+.end

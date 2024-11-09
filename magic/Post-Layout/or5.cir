@@ -1,0 +1,98 @@
+* 5-Input-OR Testing Code
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Test Signals
+Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
+Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
+Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
+Va d gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 25n 50n)
+Ve e gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 20n 40n)
+
+
+* SPICE3 file created from or5.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 vdd e a_n74_116# w_n79_136# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 a_n74_116# d a_n75_82# w_n80_103# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1002 ybar b gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1003 ybar a gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1004 ybar d gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1005 ybar c gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1006 ybar c a_n75_7# w_n81_1# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 y ybar vdd w_n16_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 a_n133_n32# e gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1009 a_n75_47# b a_n75_7# w_n81_34# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1010 a_n75_82# a a_n75_47# w_n81_69# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1011 y ybar gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 ybar gnd 2.424f
+C1 w_n16_0# y 1.88f
+C2 w_n81_1# c 2.312f
+C3 w_n81_1# a_n75_7# 2.444f
+C4 w_n81_34# a_n75_7# 1.128f
+C5 w_n16_0# ybar 1.014f
+C6 w_n81_34# b 1.482f
+C7 w_n81_1# ybar 1.88f
+C8 w_n81_34# a_n75_47# 1.41f
+C9 w_n81_69# a_n75_47# 1.41f
+C10 w_n81_69# a 1.482f
+C11 w_n81_69# a_n75_82# 1.598f
+C12 w_n16_0# vdd 1.128f
+C13 w_n80_103# a_n75_82# 1.41f
+C14 w_n80_103# d 1.482f
+C15 w_n80_103# a_n74_116# 1.598f
+C16 w_n79_136# a_n74_116# 1.41f
+C17 w_n79_136# e 1.482f
+C18 w_n79_136# vdd 1.88f
+C19 a_n133_n32# 0 0.608f 
+C20 gnd 0 23.406f 
+C21 y 0 4.324f 
+C22 c 0 8.299999f 
+C23 a_n75_7# 0 4.888f 
+C24 b 0 14.034f 
+C25 ybar 0 22.275f 
+C26 a_n75_47# 0 2.585f 
+C27 a 0 25.962f 
+C28 a_n75_82# 0 2.35f 
+C29 d 0 36.49f 
+C30 a_n74_116# 0 2.115f 
+C31 e 0 46.642002f 
+C32 vdd 0 30.596998f 
+
+
+.control
+  set hcopypscolor = 1
+  set color0 = white
+  set color1 = black
+  set color2 = red
+  set color3 = blue
+  set color4 = brown
+  set color5 = magenta
+  set color6 = cyan
+  set color7 = green
+  tran 1n 200n
+    plot a 2+b 4+c 6+d 8+e 10+y
+.endc
+
+

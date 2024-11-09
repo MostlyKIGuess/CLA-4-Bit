@@ -1,0 +1,79 @@
+* SPICE3 file created from and3.ext - technology: scmos
+* 3-Input-AND Testing Code
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Test Signals
+Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
+Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
+Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
+
+
+
+* SPICE3 file created from and3.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 ybar b vdd w_n87_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 ybar a vdd w_n120_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1002 ybar c a_n64_n50# Gnd CMOSN w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1003 a_n64_n50# b a_n64_n69# Gnd CMOSN w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1004 a_n64_n69# a gnd Gnd CMOSN w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1005 ybar c vdd w_n54_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1006 y ybar vdd w_n16_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 y ybar gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 w_n87_0# b 1.014f
+C1 w_n16_0# vdd 1.128f
+C2 w_n120_0# ybar 2.45f
+C3 b ybar 0.19f
+C4 w_n16_0# y 1.88f
+C5 w_n87_0# ybar 3.59f
+C6 w_n120_0# vdd 1.128f
+C7 w_n54_0# c 1.014f
+C8 c ybar 0.19f
+C9 w_n120_0# a 1.014f
+C10 w_n87_0# vdd 1.128f
+C11 w_n54_0# ybar 3.59f
+C12 w_n54_0# vdd 1.128f
+C13 w_n16_0# ybar 1.014f
+C14 a_n64_n69# 0 1.316f 
+C15 a_n64_n50# 0 1.316f 
+C16 gnd 0 10.622f 
+C17 y 0 4.324f 
+C18 vdd 0 36.096f 
+C19 ybar 0 17.889f 
+C20 c 0 19.631f 
+C21 b 0 23.626f 
+C22 a 0 31.804f 
+
+
+
+.control
+  set hcopypscolor = 1
+  set color0 = white
+  set color1 = black
+  set color2 = red
+  set color3 = blue
+  set color4 = brown
+  set color5 = magenta
+  set color6 = cyan
+  set color7 = green
+  tran 1n 200n
+    plot a 2+b 4+c 6+y
+.endc

@@ -1,0 +1,26 @@
+* 3-Input-OR Modular Code
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+
+* 3-Input-OR Gate Subcircuit
+.subckt or3 a b c y vdd gnd
+    
+   
+    * 3 input nor
+    Mn1 ybar a gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mn2 ybar b gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mn3 ybar c gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    Mp1 ybar a z vdd CMOSP L={2*LAMBDA} W={3*width_P} AS={5*3*width_P*LAMBDA} PS={10*LAMBDA+2*3*width_P} AD={5*3*width_P*LAMBDA} PD={10*LAMBDA+2*3*width_P}
+    Mp2 z b x vdd CMOSP L={2*LAMBDA} W={3*width_P} AS={5*3*width_P*LAMBDA} PS={10*LAMBDA+2*3*width_P} AD={5*3*width_P*LAMBDA} PD={10*LAMBDA+2*3*width_P}
+    Mp3 x c vdd vdd CMOSP L={2*LAMBDA} W={3*width_P} AS={5*3*width_P*LAMBDA} PS={10*LAMBDA+2*3*width_P} AD={5*3*width_P*LAMBDA} PD={10*LAMBDA+2*3*width_P}
+
+     * inverter
+    Mp4 y ybar vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    Mn4 y ybar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+.ends or3

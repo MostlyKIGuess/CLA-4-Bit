@@ -1,0 +1,14 @@
+* 2x1 Multiplexer - 2x1muxmodular.cir
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* 2x1 MUX Subcircuit
+.subckt mux2x1 in0 in1 sel out
+  M1 out sel in0 vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    M2 out sel in1 gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+.ends mux2x1

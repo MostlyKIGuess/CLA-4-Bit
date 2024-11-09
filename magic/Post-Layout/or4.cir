@@ -1,0 +1,84 @@
+* 4-Input-OR Testing Code
+* TSMC 180nm Technology Parameters
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+* Supply
+Vdd vdd gnd 'SUPPLY'
+
+* Test Signals
+Vclk b gnd PULSE(0 'SUPPLY' 0 0.001n 0.01n 10n 20n)
+Vd a gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 35n 70n)
+Vc c gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 15n 30n)
+Va d gnd PULSE(0 'SUPPLY' 0n 0.001n 0.01n 25n 50n)
+* SPICE3 file created from or4.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 vdd d a_n75_82# w_n80_103# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 ybar b gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1002 ybar a gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1003 ybar d gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1004 ybar c gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1005 ybar c a_n75_7# w_n81_1# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1006 y ybar vdd w_n16_0# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 a_n75_47# b a_n75_7# w_n81_34# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 a_n75_82# a a_n75_47# w_n81_69# CMOSP w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1009 y ybar gnd Gnd CMOSN w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 ybar w_n16_0# 1.014f
+C1 a_n75_7# w_n81_1# 2.444f
+C2 w_n80_103# a_n75_82# 1.41f
+C3 w_n16_0# vdd 1.128f
+C4 a_n75_47# w_n81_34# 1.41f
+C5 w_n16_0# y 1.88f
+C6 a_n75_7# w_n81_34# 1.128f
+C7 w_n80_103# d 1.482f
+C8 w_n81_69# a_n75_47# 1.41f
+C9 ybar gnd 2.424f
+C10 c w_n81_1# 2.312f
+C11 w_n81_69# a_n75_82# 1.598f
+C12 ybar w_n81_1# 1.88f
+C13 b w_n81_34# 1.482f
+C14 w_n80_103# vdd 1.88f
+C15 w_n81_69# a 1.482f
+C16 gnd 0 19.834f 
+C17 y 0 4.324f 
+C18 c 0 8.299999f 
+C19 a_n75_7# 0 4.888f 
+C20 b 0 14.034f 
+C21 ybar 0 22.275f 
+C22 a_n75_47# 0 2.585f 
+C23 a 0 25.962f 
+C24 a_n75_82# 0 2.35f 
+C25 d 0 36.49f 
+C26 vdd 0 23.03f 
+
+
+.control
+  set hcopypscolor = 1
+  set color0 = white
+  set color1 = black
+  set color2 = red
+  set color3 = blue
+  set color4 = brown
+  set color5 = magenta
+  set color6 = cyan
+  set color7 = green
+  tran 1n 200n
+    plot a 2+b 4+c 6+d 8+y
+.endc
+

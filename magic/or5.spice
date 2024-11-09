@@ -1,0 +1,61 @@
+* SPICE3 file created from or5.ext - technology: scmos
+
+.option scale=1u
+
+M1000 vdd e a_n74_116# w_n79_136# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 a_n74_116# d a_n75_82# w_n80_103# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1002 ybar b gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1003 ybar a gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1004 ybar d gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1005 ybar c gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1006 ybar c a_n75_7# w_n81_1# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 y ybar vdd w_n16_0# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 a_n133_n32# e gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1009 a_n75_47# b a_n75_7# w_n81_34# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1010 a_n75_82# a a_n75_47# w_n81_69# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1011 y ybar gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+C0 ybar gnd 2.424f
+C1 w_n16_0# y 1.88f
+C2 w_n81_1# c 2.312f
+C3 w_n81_1# a_n75_7# 2.444f
+C4 w_n81_34# a_n75_7# 1.128f
+C5 w_n16_0# ybar 1.014f
+C6 w_n81_34# b 1.482f
+C7 w_n81_1# ybar 1.88f
+C8 w_n81_34# a_n75_47# 1.41f
+C9 w_n81_69# a_n75_47# 1.41f
+C10 w_n81_69# a 1.482f
+C11 w_n81_69# a_n75_82# 1.598f
+C12 w_n16_0# vdd 1.128f
+C13 w_n80_103# a_n75_82# 1.41f
+C14 w_n80_103# d 1.482f
+C15 w_n80_103# a_n74_116# 1.598f
+C16 w_n79_136# a_n74_116# 1.41f
+C17 w_n79_136# e 1.482f
+C18 w_n79_136# vdd 1.88f
+C19 a_n133_n32# 0 0.608f **FLOATING
+C20 gnd 0 23.406f **FLOATING
+C21 y 0 4.324f **FLOATING
+C22 c 0 8.299999f **FLOATING
+C23 a_n75_7# 0 4.888f **FLOATING
+C24 b 0 14.034f **FLOATING
+C25 ybar 0 22.275f **FLOATING
+C26 a_n75_47# 0 2.585f **FLOATING
+C27 a 0 25.962f **FLOATING
+C28 a_n75_82# 0 2.35f **FLOATING
+C29 d 0 36.49f **FLOATING
+C30 a_n74_116# 0 2.115f **FLOATING
+C31 e 0 46.642002f **FLOATING
+C32 vdd 0 30.596998f **FLOATING

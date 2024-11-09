@@ -1,0 +1,95 @@
+$date
+	Sat Nov  9 10:13:08 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cla_tb $end
+$var wire 4 ! S [3:0] $end
+$var wire 5 " C [4:0] $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Cin $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 4 ( S [3:0] $end
+$var wire 5 ) C [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#100
+b11 !
+b11 (
+b10 $
+b10 '
+b1 #
+b1 &
+#110
+b1100 !
+b1100 (
+b1111 "
+b1111 )
+1%
+b110 $
+b110 '
+b101 #
+b101 &
+#120
+b0 !
+b0 (
+b11110 "
+b11110 )
+0%
+b1 $
+b1 '
+b1111 #
+b1111 &
+#130
+b11111 "
+b11111 )
+1%
+b101 $
+b101 '
+b1010 #
+b1010 &
+#140
+b1111 !
+b1111 (
+b0 "
+b0 )
+0%
+b11 $
+b11 '
+b1100 #
+b1100 &
+#150
+b0 !
+b0 (
+b11111 "
+b11111 )
+1%
+b110 $
+b110 '
+b1001 #
+b1001 &
+#160
