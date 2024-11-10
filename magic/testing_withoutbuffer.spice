@@ -1,0 +1,939 @@
+* SPICE3 file created from testing_withoutbuffer.ext - technology: scmos
+
+.option scale=1u
+
+M1000 g2 a_582_n251# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1001 a_445_147# g0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1002 a_610_376# p2 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1003 a_594_575# p1 a_594_556# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1004 a_440_412# p1 a_440_393# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1005 p1p0c0 a_453_311# vdd w_544_301# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1006 a3 a_338_n335# a_303_n382# w_329_n384# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1007 a_848_2# p2 c2 w_835_n8# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 a_518_635# p3 vdd w_505_625# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1009 a_731_457# p2p1p0c0 a_731_417# w_725_444# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1010 b2 a2 a_303_n248# w_368_n246# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1011 gnd a_303_n248# a_270_n248# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1012 p3p2g1 a_381_614# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1013 p2p1p0c0 a_534_474# vdd w_658_464# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1014 a_610_395# p1 a_610_376# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1015 gnd a_325_n180# a_303_n248# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1016 a_815_n46# p2 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1017 a_518_635# g0 a_594_575# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1018 a_940_n169# a_864_n132# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1019 s2 a_924_n35# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1020 vdd a0 a_345_92# w_400_28# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1021 vdd a_302_20# a_269_20# w_291_17# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1022 a_346_n176# b2 a_303_n248# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1023 a_825_350# p3p2g1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1024 a_847_245# a_771_282# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1025 p0cin a_271_142# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1026 a_884_498# p3g2 a_883_464# w_878_485# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1027 a_731_492# p2g1g0 a_731_457# w_725_479# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1028 a_831_148# a_879_123# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1029 g3 a3 b3 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1030 a_798_100# p1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1031 a_831_148# a_866_144# p1 w_857_147# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1032 a_582_n251# a2 vdd w_569_n219# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1033 vdd g3 a_884_498# w_879_518# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1034 a_825_350# p3p2p1g0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1035 vdd a_269_20# p0 w_258_17# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1036 a_218_418# p2 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1037 b1 a1 a_302_n114# w_367_n112# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1038 a_825_350# p3p2p1p0c0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1039 a_271_280# p1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1040 s2 a_924_n35# vdd w_944_n3# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1041 a_907_111# a_831_148# vdd w_894_143# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1042 p3p2p1g0 a_518_635# vdd w_642_625# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1043 g2 a_582_n251# b2 w_602_n213# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1044 p3g2 a_206_556# g2 w_226_594# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1045 p0cin a_271_142# cin w_291_180# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1046 g1 a_579_n113# b1 w_599_n75# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1047 a_582_25# a0 vdd w_569_57# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1048 p2p1g0 a_397_472# vdd w_488_462# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1049 c3 a_693_378# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1050 a_440_393# p2 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1051 g1 a_579_n113# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1052 a_924_n35# a_848_2# vdd w_911_n3# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1053 a_688_664# p0 vdd w_774_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1054 a_445_147# p0cin gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1055 a_600_239# p1g0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1056 s3 a_940_n169# vdd w_960_n137# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1057 a_848_2# a_896_n23# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1058 a_688_664# cin vdd w_807_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1059 a_693_378# p2g1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1060 p2g1 p2 g1 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1061 a_346_n310# b3 a_303_n382# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1062 a_738_234# p0 vdd w_725_266# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1063 a_924_n35# a_848_2# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1064 p3p2g1 a_381_614# vdd w_472_604# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1065 a_206_556# p3 vdd w_193_588# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1066 a_424_535# p3 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1067 s0 a_847_245# vdd w_867_277# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1068 a_582_n389# a3 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1069 a_864_n132# a_912_n157# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1070 vdd a2 a_346_n176# w_401_n240# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1071 g2 a2 b2 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1072 c4 a_825_350# vdd w_942_382# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1073 a_424_554# p2 a_424_535# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1074 a_453_311# p0 vdd w_473_301# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1075 a_831_n180# p3 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1076 p3p2p1p0c0 a_688_664# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1077 a_771_282# p0 cin w_758_272# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1078 g1 a1 b1 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1079 a_271_142# p0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1080 a_534_474# cin vdd w_620_464# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1081 a_534_474# p0 vdd w_587_464# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1082 a_453_311# cin vdd w_506_301# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1083 a_271_280# p1 vdd w_258_312# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1084 a_693_378# p2g1g0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1085 a_381_614# g1 a_424_554# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1086 a_883_429# p3p2p1g0 a_883_389# w_877_416# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1087 c1 a_445_147# vdd w_504_133# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1088 p1g0 a_271_280# g0 w_291_318# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1089 a_825_350# p3g2 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1090 a_688_664# p1 vdd w_741_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1091 a_797_604# p0 a_797_585# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1092 vdd a_269_n114# p1 w_258_n117# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1093 a_345_n42# b1 a_302_n114# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1094 a1 a_337_n67# a_302_n114# w_328_n116# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1095 s1 a_907_111# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1096 a_693_378# p2p1p0c0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1097 c2 a_600_239# vdd w_676_271# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1098 b3 a3 a_303_n382# w_368_n380# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1099 gnd a_324_n46# a_302_n114# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1100 a_815_n46# p2 vdd w_802_n14# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1101 gnd a_324_88# a_302_20# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1102 vdd a3 a_346_n310# w_401_n374# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1103 g0 a_582_25# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1104 p1p0c0 a_453_311# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1105 a_345_92# b0 a_302_20# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1106 a_688_664# cin a_797_604# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1107 vdd g2 a_731_492# w_726_513# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1108 a_883_464# p3p2g1 a_883_429# w_877_451# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1109 a_693_378# g2 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1110 a_831_148# c1 a_798_100# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1111 a_864_n132# p3 c3 w_851_n142# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1112 p1g0 p1 g0 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1113 a_771_282# a_819_257# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1114 a_518_635# p1 vdd w_571_625# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1115 a_397_472# g0 vdd w_450_462# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1116 a_579_n113# a1 vdd w_566_n81# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1117 a_797_547# p3 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1118 a_496_251# p0 a_496_232# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1119 a_848_2# a_883_n2# p2 w_874_1# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1120 a_518_635# g0 vdd w_604_625# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1121 a_825_350# p3p2p1p0c0 a_883_389# w_877_383# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1122 p2p1p0c0 a_534_474# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1123 a_847_245# a_771_282# vdd w_834_277# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1124 vdd a_270_n248# p2 w_259_n251# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1125 a_579_n113# a1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1126 p3g2 a_206_556# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1127 a_797_566# p2 a_797_547# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1128 a_453_311# cin a_496_251# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1129 a_453_311# p1 vdd w_440_301# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1130 gnd a3 a_346_n310# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1131 a_798_100# p1 vdd w_785_132# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1132 a_534_474# p1 vdd w_554_464# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1133 p1g0 a_271_280# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1134 a_940_n169# a_864_n132# vdd w_927_n137# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1135 a_445_147# g0 a_445_140# w_439_134# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1136 a_797_585# p1 a_797_566# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1137 a_864_n132# c3 a_831_n180# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1138 gnd a_302_n114# a_269_n114# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1139 s3 a_940_n169# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1140 a_864_n132# a_899_n136# p3 w_890_n133# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1141 gnd a_269_n114# p1 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1142 a_381_614# g1 vdd w_434_604# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1143 vdd a_303_n248# a_270_n248# w_292_n251# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1144 a_848_2# c2 a_815_n46# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1145 a_831_148# p1 c1 w_818_138# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1146 a_688_664# p3 vdd w_675_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1147 a_907_111# a_831_148# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1148 c2 a_600_239# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1149 a0 a_337_67# a_302_20# w_328_18# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1150 g0 a0 b0 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1151 vdd a_270_n382# p3 w_259_n385# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1152 a_582_25# a0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1153 a_688_664# p2 vdd w_708_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1154 p2p1g0 a_397_472# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1155 gnd a2 a_346_n176# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1156 vdd p0cin a_445_140# w_439_167# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1157 c3 a_693_378# vdd w_790_410# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1158 p0cin p0 cin Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1159 p2g1 a_218_418# g1 w_238_456# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1160 vdd a1 a_345_n42# w_400_n106# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1161 a_397_472# g0 a_440_412# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1162 g3 a_582_n389# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1163 a_397_472# p2 vdd w_384_462# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1164 vdd a_303_n382# a_270_n382# w_292_n385# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1165 vdd a_302_n114# a_269_n114# w_291_n117# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1166 a_617_318# p1g0 a_617_278# w_611_305# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1167 a_771_282# a_806_278# p0 w_797_281# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1168 a_738_234# p0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1169 a_518_635# p2 vdd w_538_625# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1170 a_496_232# p1 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1171 b0 a0 a_302_20# w_367_22# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1172 a_397_472# p1 vdd w_417_462# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1173 a_206_556# p3 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1174 gnd a_270_n382# p3 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1175 a_610_414# p0 a_610_395# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1176 p3p2p1p0c0 a_688_664# vdd w_845_654# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1177 a_271_142# p0 vdd w_258_174# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1178 a_582_n251# a2 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1179 a_534_474# p2 vdd w_521_464# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1180 s0 a_847_245# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1181 vdd g1 a_617_318# w_611_340# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1182 c4 a_825_350# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1183 gnd a1 a_345_n42# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1184 gnd a0 a_345_92# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1185 gnd a_302_20# a_269_20# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1186 a_381_614# p2 vdd w_401_604# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1187 a_534_474# cin a_610_414# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1188 a2 a_338_n201# a_303_n248# w_329_n250# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1189 p2g1 a_218_418# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1190 a_771_282# cin a_738_234# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1191 a_381_614# p3 vdd w_368_604# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1192 a_594_537# p3 gnd Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1193 a_600_239# g1 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1194 g0 a_582_25# b0 w_602_63# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1195 a_582_n389# a3 vdd w_569_n357# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1196 p3g2 p3 g2 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1197 gnd a_325_n314# a_303_n382# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1198 gnd a_303_n382# a_270_n382# Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1199 a_218_418# p2 vdd w_205_450# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1200 a_825_350# g3 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1201 a_600_239# p1p0c0 a_617_278# w_611_272# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1202 c1 a_445_147# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1203 s1 a_907_111# vdd w_927_143# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1204 p3p2p1g0 a_518_635# gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1205 a_693_378# p2g1 a_731_417# w_725_411# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1206 a_831_n180# p3 vdd w_818_n148# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1207 a_600_239# p1p0c0 gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1208 gnd a_270_n248# p2 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1209 a_594_556# p2 a_594_537# Gnd nfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1210 gnd a_269_20# p0 Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1211 g3 a_582_n389# b3 w_602_n351# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+C0 g3 b3 1.91f
+C1 b2 gnd 1.91f
+C2 c3 w_790_410# 1.88f
+C3 a_864_n132# c3 6.03f
+C4 p3 w_851_n142# 1.17f
+C5 vdd w_400_n106# 1.128f
+C6 a_397_472# g0 0.19f
+C7 a_579_n113# w_566_n81# 1.88f
+C8 a_688_664# w_807_654# 3.59f
+C9 p3p2p1p0c0 w_877_383# 2.312f
+C10 p2 w_521_464# 1.014f
+C11 vdd w_571_625# 1.128f
+C12 vdd w_258_312# 1.128f
+C13 a_518_635# p2 0.19f
+C14 cin w_807_654# 1.014f
+C15 b0 gnd 1.91f
+C16 vdd w_291_n117# 1.128f
+C17 a_738_234# w_725_266# 1.88f
+C18 a_688_664# w_708_654# 3.59f
+C19 vdd w_472_604# 1.128f
+C20 vdd w_927_143# 1.128f
+C21 a_534_474# w_658_464# 1.014f
+C22 g2 vdd 3.15f
+C23 a_815_n46# w_802_n14# 1.88f
+C24 p1 w_571_625# 1.014f
+C25 a_397_472# p1 0.19f
+C26 a_907_111# w_927_143# 1.014f
+C27 a_303_n248# w_329_n250# 1.128f
+C28 cin w_506_301# 1.014f
+C29 p1 w_258_312# 1.014f
+C30 a_771_282# w_834_277# 1.014f
+C31 a_518_635# w_571_625# 3.59f
+C32 a_302_n114# w_291_n117# 1.014f
+C33 p2 w_205_450# 1.014f
+C34 a_825_350# w_942_382# 1.014f
+C35 p3 w_505_625# 1.014f
+C36 a_883_389# w_877_416# 1.128f
+C37 vdd w_368_604# 1.128f
+C38 a_848_2# w_874_1# 1.128f
+C39 vdd w_569_n357# 1.128f
+C40 g2 w_726_513# 1.482f
+C41 a_534_474# cin 0.19f
+C42 a_831_148# w_857_147# 1.128f
+C43 a_445_147# gnd 0.808f
+C44 a_397_472# w_417_462# 3.59f
+C45 a_270_n248# w_259_n251# 1.014f
+C46 a_218_418# w_238_456# 1.014f
+C47 a_617_278# w_611_272# 2.444f
+C48 g0 w_439_134# 2.996f
+C49 b1 w_400_n106# 1.71f
+C50 g1 w_599_n75# 2.82f
+C51 a1 w_566_n81# 1.014f
+C52 a_381_614# w_434_604# 3.59f
+C53 p2 w_835_n8# 1.17f
+C54 p1 w_818_138# 1.17f
+C55 a2 w_368_n246# 1.17f
+C56 a_825_350# gnd 3.232f
+C57 a_206_556# w_193_588# 1.88f
+C58 a1 w_328_n116# 1.128f
+C59 p3 w_193_588# 1.014f
+C60 p2g1 w_725_411# 2.312f
+C61 p3 vdd 2.52f
+C62 vdd w_258_174# 1.128f
+C63 vdd w_658_464# 1.128f
+C64 a_582_25# w_602_63# 1.014f
+C65 b2 a_346_n176# 1.08f
+C66 p3p2g1 w_472_604# 1.88f
+C67 vdd w_488_462# 1.128f
+C68 a_883_429# w_877_451# 1.41f
+C69 a_731_417# w_725_411# 2.444f
+C70 b3 gnd 1.73f
+C71 g1 w_434_604# 1.014f
+C72 a_337_67# w_328_18# 0.936f
+C73 g3 w_602_n351# 2.82f
+C74 p3 w_259_n385# 1.88f
+C75 a_303_n382# w_292_n385# 1.014f
+C76 b3 w_401_n374# 1.71f
+C77 a3 w_569_n357# 1.014f
+C78 a_271_142# w_291_180# 1.014f
+C79 cin vdd 1.26f
+C80 a_940_n169# w_960_n137# 1.014f
+C81 vdd w_384_462# 1.128f
+C82 a_693_378# w_790_410# 1.014f
+C83 g3 vdd 1.89f
+C84 b0 w_602_63# 1.128f
+C85 a1 vdd 2.52f
+C86 a_302_20# w_367_22# 2.162f
+C87 vdd w_259_n251# 1.128f
+C88 a3 w_329_n384# 1.128f
+C89 cin w_291_180# 1.128f
+C90 a_688_664# p1 0.19f
+C91 a_864_n132# w_890_n133# 1.128f
+C92 vdd w_845_654# 1.128f
+C93 a_453_311# w_473_301# 3.59f
+C94 vdd w_911_n3# 1.128f
+C95 a_731_457# w_725_444# 1.41f
+C96 b3 a_303_n382# 6.03f
+C97 g0 p1p0c0 0.18f
+C98 a0 w_400_28# 1.014f
+C99 b0 w_367_22# 1.88f
+C100 a_269_20# w_291_17# 1.88f
+C101 a2 b2 3.468f
+C102 p0cin w_439_167# 1.482f
+C103 p3g2 w_226_594# 2.82f
+C104 vdd w_741_654# 1.128f
+C105 a_271_280# w_291_318# 1.014f
+C106 c1 a_879_123# 0.54f
+C107 vdd w_802_n14# 1.128f
+C108 a_883_464# w_878_485# 1.41f
+C109 p2g1g0 w_725_479# 1.482f
+C110 vdd w_544_301# 1.128f
+C111 a_381_614# g1 0.19f
+C112 a_582_n251# w_602_n213# 1.014f
+C113 p0 w_758_272# 1.17f
+C114 vdd w_642_625# 1.128f
+C115 c4 w_942_382# 1.88f
+C116 a0 b0 4.458f
+C117 vdd w_400_28# 1.128f
+C118 vdd w_440_301# 1.128f
+C119 b2 vdd 1.26f
+C120 p1 w_741_654# 1.014f
+C121 c2 w_676_271# 1.88f
+C122 s1 w_927_143# 1.88f
+C123 a_338_n201# w_329_n250# 0.936f
+C124 p3 w_818_n148# 1.014f
+C125 p0 w_725_266# 1.014f
+C126 a1 b1 4.008f
+C127 a_688_664# w_774_654# 3.59f
+C128 vdd w_538_625# 1.128f
+C129 p3 w_675_654# 1.014f
+C130 vdd w_291_17# 1.128f
+C131 g1 w_238_456# 1.128f
+C132 vdd w_942_382# 1.128f
+C133 g0 b0 1.91f
+C134 a_688_664# p2 0.19f
+C135 c2 w_835_n8# 1.88f
+C136 b0 vdd 1.26f
+C137 p2p1g0 w_488_462# 1.88f
+C138 a_534_474# w_554_464# 3.59f
+C139 vdd w_258_n117# 1.128f
+C140 p1 w_440_301# 1.014f
+C141 a_847_245# w_867_277# 1.014f
+C142 a_302_n114# w_367_n112# 2.162f
+C143 a_518_635# w_642_625# 1.014f
+C144 a_688_664# w_675_654# 2.45f
+C145 vdd w_434_604# 1.128f
+C146 p2 w_384_462# 1.014f
+C147 vdd w_894_143# 1.128f
+C148 a_534_474# w_620_464# 3.59f
+C149 a_884_498# w_879_518# 1.41f
+C150 a_731_492# w_726_513# 1.41f
+C151 g0 c1 1.01f
+C152 a_924_n35# w_911_n3# 1.88f
+C153 c1 w_504_133# 1.88f
+C154 a_798_100# w_785_132# 1.88f
+C155 a_907_111# w_894_143# 1.88f
+C156 a_303_n248# w_292_n251# 1.014f
+C157 a_397_472# w_488_462# 1.014f
+C158 p2 w_259_n251# 1.88f
+C159 b2 w_401_n240# 1.71f
+C160 a_771_282# w_797_281# 1.128f
+C161 b1 w_599_n75# 1.128f
+C162 a_518_635# w_538_625# 3.59f
+C163 a_269_n114# w_291_n117# 1.88f
+C164 p3p2p1g0 w_877_416# 1.482f
+C165 a_825_350# w_877_383# 1.88f
+C166 vdd w_785_132# 1.128f
+C167 p1 w_258_n117# 1.88f
+C168 a_848_2# w_835_n8# 2.162f
+C169 a_771_282# cin 6.03f
+C170 g0 a_445_147# 0.72f
+C171 a_883_n2# w_874_1# 0.936f
+C172 vdd w_401_n374# 1.128f
+C173 a_582_n389# w_602_n351# 1.014f
+C174 a_534_474# p0 0.19f
+C175 a_866_144# w_857_147# 0.936f
+C176 a_445_140# w_439_134# 2.444f
+C177 a_445_147# w_504_133# 1.014f
+C178 a_831_148# w_818_138# 2.162f
+C179 g2 w_602_n213# 2.82f
+C180 a2 w_569_n219# 1.014f
+C181 a_218_418# w_205_450# 1.88f
+C182 a_397_472# w_384_462# 2.45f
+C183 a_600_239# w_676_271# 1.014f
+C184 a_617_278# w_611_305# 1.128f
+C185 b1 w_367_n112# 1.88f
+C186 a1 w_400_n106# 1.014f
+C187 a_381_614# w_401_604# 3.59f
+C188 p3 w_368_604# 1.014f
+C189 vdd w_439_167# 1.41f
+C190 p2 w_802_n14# 1.014f
+C191 vdd w_879_518# 1.88f
+C192 a_453_311# cin 0.19f
+C193 vdd w_292_n385# 1.128f
+C194 a_338_n335# w_329_n384# 0.936f
+C195 a_346_n310# w_401_n374# 1.88f
+C196 p0 w_258_17# 1.88f
+C197 p1 w_785_132# 1.014f
+C198 a2 w_329_n250# 1.128f
+C199 s3 w_960_n137# 1.88f
+C200 vdd w_554_464# 1.128f
+C201 vdd w_867_277# 1.128f
+C202 vdd w_620_464# 1.128f
+C203 c3 a_912_n157# 0.54f
+C204 a_582_25# w_569_57# 1.88f
+C205 g0 w_450_462# 1.014f
+C206 vdd w_569_n219# 1.128f
+C207 b3 w_602_n351# 1.128f
+C208 a_303_n382# w_368_n380# 2.162f
+C209 a_617_318# w_611_305# 1.41f
+C210 vdd w_450_462# 1.128f
+C211 a_731_417# w_725_444# 1.128f
+C212 p2 w_538_625# 1.014f
+C213 p3p2g1 w_877_451# 1.482f
+C214 b3 vdd 1.26f
+C215 p1 w_554_464# 1.014f
+C216 a_345_92# w_400_28# 1.88f
+C217 b1 gnd 2.314f
+C218 a3 w_401_n374# 1.014f
+C219 b2 a_325_n180# 0.54f
+C220 a_270_n382# w_292_n385# 1.88f
+C221 b3 w_368_n380# 1.88f
+C222 p3p2p1p0c0 w_845_654# 1.88f
+C223 p0 vdd 2.52f
+C224 a_271_142# w_258_174# 1.88f
+C225 a_940_n169# w_927_n137# 1.88f
+C226 a_831_n180# w_818_n148# 1.88f
+C227 a_453_311# w_544_301# 1.014f
+C228 a_693_378# w_725_411# 1.88f
+C229 vdd w_725_266# 1.128f
+C230 b3 a_346_n310# 1.08f
+C231 a_302_20# w_328_18# 1.128f
+C232 g1 vdd 3.15f
+C233 vdd w_960_n137# 1.128f
+C234 a_899_n136# w_890_n133# 0.936f
+C235 p0cin vdd 1.89f
+C236 b1 a_345_n42# 1.08f
+C237 a_864_n132# w_851_n142# 2.162f
+C238 vdd w_807_654# 1.128f
+C239 a_453_311# w_440_301# 2.45f
+C240 b0 a_345_92# 1.08f
+C241 p2p1p0c0 w_658_464# 1.88f
+C242 a_269_20# w_258_17# 1.014f
+C243 a0 w_367_22# 1.17f
+C244 g2 b2 1.91f
+C245 p2g1 w_238_456# 2.82f
+C246 a_688_664# cin 0.19f
+C247 p0cin w_291_180# 2.82f
+C248 s0 w_867_277# 1.88f
+C249 g0 w_602_63# 2.82f
+C250 b1 a_324_n46# 0.54f
+C251 a_271_280# w_258_312# 1.88f
+C252 vdd w_708_654# 1.128f
+C253 p0 w_587_464# 1.014f
+C254 b0 a_324_88# 0.54f
+C255 p3g2 vdd 1.89f
+C256 p3g2 w_878_485# 1.482f
+C257 vdd w_506_301# 1.128f
+C258 a3 b3 3.738f
+C259 g0 w_604_625# 1.014f
+C260 vdd w_566_n81# 1.128f
+C261 p3 w_890_n133# 1.128f
+C262 a_582_n251# w_569_n219# 1.88f
+C263 a_579_n113# w_599_n75# 1.014f
+C264 a_688_664# w_845_654# 1.014f
+C265 g0 w_291_318# 1.128f
+C266 vdd w_604_625# 1.128f
+C267 a_381_614# p2 0.19f
+C268 p3p2p1g0 w_642_625# 1.88f
+C269 a_346_n176# w_401_n240# 1.88f
+C270 a_848_2# c2 6.03f
+C271 g1 b1 2.674f
+C272 a_688_664# w_741_654# 3.59f
+C273 a_337_n67# w_328_n116# 0.936f
+C274 a_345_n42# w_400_n106# 1.88f
+C275 vdd w_505_625# 1.128f
+C276 vdd w_258_17# 1.128f
+C277 a_884_498# w_878_485# 1.598f
+C278 a_731_492# w_725_479# 1.598f
+C279 g2 w_226_594# 1.128f
+C280 a2 vdd 2.52f
+C281 p0 w_774_654# 1.014f
+C282 a_534_474# p1 0.19f
+C283 c1 w_818_138# 1.88f
+C284 a_303_n248# w_368_n246# 2.162f
+C285 a0 vdd 2.52f
+C286 vdd w_944_n3# 1.128f
+C287 b2 w_602_n213# 1.128f
+C288 a_534_474# w_521_464# 2.45f
+C289 a_847_245# w_834_277# 1.88f
+C290 a_302_n114# w_328_n116# 1.128f
+C291 a_518_635# w_604_625# 3.59f
+C292 vdd w_401_604# 1.128f
+C293 a_883_389# w_877_383# 2.444f
+C294 a_534_474# w_587_464# 3.59f
+C295 vdd w_790_410# 1.128f
+C296 a_848_2# w_911_n3# 1.014f
+C297 g1 w_611_340# 1.482f
+C298 a_831_148# w_894_143# 1.014f
+C299 a_270_n248# w_292_n251# 1.88f
+C300 a_397_472# w_450_462# 3.59f
+C301 b2 w_368_n246# 1.88f
+C302 p0 w_473_301# 1.014f
+C303 p1p0c0 w_611_272# 2.312f
+C304 a_771_282# w_758_272# 2.162f
+C305 a_806_278# w_797_281# 0.936f
+C306 g0 w_504_133# 1.33f
+C307 a_269_n114# w_258_n117# 1.014f
+C308 g0 vdd 4.16f
+C309 a_381_614# w_472_604# 1.014f
+C310 a_518_635# w_505_625# 2.45f
+C311 vdd w_193_588# 1.128f
+C312 a_831_148# c1 6.03f
+C313 p2 w_874_1# 1.128f
+C314 vdd w_504_133# 1.128f
+C315 a_582_n389# w_569_n357# 1.88f
+C316 a_445_140# w_439_167# 1.128f
+C317 p1 w_857_147# 1.128f
+C318 a_445_147# w_439_134# 1.88f
+C319 a2 w_401_n240# 1.014f
+C320 p1p0c0 w_544_301# 1.88f
+C321 a_600_239# w_611_272# 1.88f
+C322 p1g0 w_611_305# 1.482f
+C323 a1 w_367_n112# 1.17f
+C324 s2 w_944_n3# 1.88f
+C325 a_381_614# w_368_604# 2.45f
+C326 a_206_556# w_226_594# 1.014f
+C327 p2 w_708_654# 1.014f
+C328 vdd w_726_513# 1.88f
+C329 a_453_311# p0 0.19f
+C330 vdd w_259_n385# 1.128f
+C331 p1 vdd 2.52f
+C332 vdd w_521_464# 1.128f
+C333 a_518_635# g0 0.19f
+C334 p2g1 vdd 1.89f
+C335 a_883_429# w_877_416# 1.41f
+C336 vdd w_834_277# 1.128f
+C337 vdd w_587_464# 1.128f
+C338 b2 a_303_n248# 6.03f
+C339 a_303_n382# w_329_n384# 1.128f
+C340 vdd w_401_n240# 1.128f
+C341 c3 w_851_n142# 1.88f
+C342 c2 a_896_n23# 0.54f
+C343 p1g0 w_291_318# 2.82f
+C344 a_617_318# w_611_340# 1.41f
+C345 vdd w_417_462# 1.128f
+C346 a_924_n35# w_944_n3# 1.014f
+C347 p2p1p0c0 w_725_444# 1.482f
+C348 a3 vdd 2.52f
+C349 b1 vdd 1.26f
+C350 vdd w_292_n251# 1.128f
+C351 a_270_n382# w_259_n385# 1.014f
+C352 a3 w_368_n380# 1.17f
+C353 a_518_635# p1 0.19f
+C354 a_864_n132# w_927_n137# 1.014f
+C355 a_453_311# w_506_301# 3.59f
+C356 vdd w_205_450# 1.128f
+C357 a_693_378# gnd 2.424f
+C358 p2 w_401_604# 1.014f
+C359 a_883_464# w_877_451# 1.598f
+C360 vdd w_676_271# 1.128f
+C361 p1 w_417_462# 1.014f
+C362 g3 w_879_518# 1.482f
+C363 b0 w_400_28# 1.71f
+C364 a0 w_569_57# 1.014f
+C365 a_302_20# w_291_17# 1.014f
+C366 vdd w_927_n137# 1.128f
+C367 p0 w_258_174# 1.014f
+C368 b1 a_302_n114# 6.03f
+C369 vdd w_774_654# 1.128f
+C370 cin w_620_464# 1.014f
+C371 b0 a_302_20# 6.03f
+C372 g0 p2 2.07f
+C373 a_731_457# w_725_479# 1.41f
+C374 vdd w_611_340# 1.88f
+C375 cin a_819_257# 0.54f
+C376 p2 vdd 2.52f
+C377 b3 a_325_n314# 0.54f
+C378 g0 p1g0 1.35f
+C379 a0 w_328_18# 1.128f
+C380 vdd w_818_n148# 1.128f
+C381 cin w_758_272# 1.88f
+C382 a_688_664# p0 0.19f
+C383 p0 w_797_281# 1.128f
+C384 a_600_239# gnd 1.616f
+C385 p1g0 vdd 1.89f
+C386 vdd w_675_654# 1.128f
+C387 vdd w_569_57# 1.128f
+C388 vdd w_473_301# 1.128f
+C389 gnd 0 1.058017p **FLOATING
+C390 vdd 0 0.793285p **FLOATING
+C391 a_338_n335# 0 3.742f **FLOATING
+C392 a_582_n389# 0 18.082f **FLOATING
+C393 a_346_n310# 0 14.946f **FLOATING
+C394 p3 0 0.237858p **FLOATING
+C395 a_303_n382# 0 31.139002f **FLOATING
+C396 a_270_n382# 0 14.266f **FLOATING
+C397 a_325_n314# 0 4.916f **FLOATING
+C398 b3 0 85.516f **FLOATING
+C399 a3 0 0.140213p **FLOATING
+C400 g3 0 0.104583p **FLOATING
+C401 a_338_n201# 0 3.742f **FLOATING
+C402 a_582_n251# 0 18.082f **FLOATING
+C403 a_912_n157# 0 4.916f **FLOATING
+C404 a_346_n176# 0 14.946f **FLOATING
+C405 p2 0 0.28041p **FLOATING
+C406 a_303_n248# 0 31.139002f **FLOATING
+C407 a_270_n248# 0 14.266f **FLOATING
+C408 a_325_n180# 0 4.916f **FLOATING
+C409 b2 0 85.212006f **FLOATING
+C410 s3 0 3.76f **FLOATING
+C411 c3 0 17.83f **FLOATING
+C412 a_831_n180# 0 14.946f **FLOATING
+C413 a2 0 0.137957p **FLOATING
+C414 g2 0 0.102951p **FLOATING
+C415 a_940_n169# 0 14.266f **FLOATING
+C416 a_864_n132# 0 31.139002f **FLOATING
+C417 a_899_n136# 0 3.742f **FLOATING
+C418 a_896_n23# 0 4.916f **FLOATING
+C419 a_337_n67# 0 3.742f **FLOATING
+C420 a_579_n113# 0 18.082f **FLOATING
+C421 a_345_n42# 0 14.946f **FLOATING
+C422 a_302_n114# 0 31.139002f **FLOATING
+C423 a_269_n114# 0 14.266f **FLOATING
+C424 a_324_n46# 0 4.916f **FLOATING
+C425 s2 0 3.76f **FLOATING
+C426 c2 0 17.83f **FLOATING
+C427 a_815_n46# 0 14.946f **FLOATING
+C428 b1 0 88.200005f **FLOATING
+C429 a1 0 0.140495p **FLOATING
+C430 g1 0 0.112151p **FLOATING
+C431 a_924_n35# 0 14.266f **FLOATING
+C432 a_848_2# 0 31.139002f **FLOATING
+C433 a_883_n2# 0 3.742f **FLOATING
+C434 a_337_67# 0 3.742f **FLOATING
+C435 a_582_25# 0 18.082f **FLOATING
+C436 a_879_123# 0 4.916f **FLOATING
+C437 a_345_92# 0 14.946f **FLOATING
+C438 a_302_20# 0 31.139002f **FLOATING
+C439 a_269_20# 0 14.266f **FLOATING
+C440 a_324_88# 0 4.916f **FLOATING
+C441 b0 0 85.82f **FLOATING
+C442 a0 0 0.144276p **FLOATING
+C443 s1 0 3.76f **FLOATING
+C444 c1 0 17.83f **FLOATING
+C445 a_798_100# 0 14.946f **FLOATING
+C446 a_445_140# 0 4.888f **FLOATING
+C447 a_445_147# 0 19.995f **FLOATING
+C448 a_907_111# 0 14.266f **FLOATING
+C449 a_831_148# 0 31.139002f **FLOATING
+C450 a_866_144# 0 3.742f **FLOATING
+C451 p1 0 0.380473p **FLOATING
+C452 a_271_142# 0 18.082f **FLOATING
+C453 a_819_257# 0 4.916f **FLOATING
+C454 a_496_232# 0 1.316f **FLOATING
+C455 cin 0 80.576996f **FLOATING
+C456 p0 0 0.200305p **FLOATING
+C457 s0 0 3.76f **FLOATING
+C458 a_738_234# 0 14.946f **FLOATING
+C459 p0cin 0 81.562996f **FLOATING
+C460 a_496_251# 0 1.316f **FLOATING
+C461 p1p0c0 0 12.624001f **FLOATING
+C462 a_617_278# 0 4.888f **FLOATING
+C463 p1g0 0 49.472f **FLOATING
+C464 a_600_239# 0 21.439001f **FLOATING
+C465 a_847_245# 0 14.266f **FLOATING
+C466 a_771_282# 0 31.139002f **FLOATING
+C467 a_806_278# 0 3.742f **FLOATING
+C468 a_617_318# 0 2.585f **FLOATING
+C469 a_453_311# 0 17.889f **FLOATING
+C470 a_271_280# 0 18.082f **FLOATING
+C471 c4 0 4.324f **FLOATING
+C472 p3p2p1p0c0 0 12.624001f **FLOATING
+C473 a_610_376# 0 1.316f **FLOATING
+C474 g0 0 0.187021p **FLOATING
+C475 a_440_393# 0 1.316f **FLOATING
+C476 a_610_395# 0 1.316f **FLOATING
+C477 a_883_389# 0 4.888f **FLOATING
+C478 p3p2p1g0 0 18.358f **FLOATING
+C479 a_825_350# 0 23.035f **FLOATING
+C480 p2g1 0 41.387997f **FLOATING
+C481 a_610_414# 0 1.316f **FLOATING
+C482 a_440_412# 0 1.316f **FLOATING
+C483 a_731_417# 0 4.888f **FLOATING
+C484 p2p1p0c0 0 18.358f **FLOATING
+C485 a_883_429# 0 2.585f **FLOATING
+C486 p3p2g1 0 30.286f **FLOATING
+C487 a_693_378# 0 22.275f **FLOATING
+C488 a_731_457# 0 2.585f **FLOATING
+C489 p2g1g0 0 25.962f **FLOATING
+C490 a_883_464# 0 2.35f **FLOATING
+C491 p3g2 0 71.223f **FLOATING
+C492 p2p1g0 0 4.324f **FLOATING
+C493 a_218_418# 0 18.082f **FLOATING
+C494 a_534_474# 0 18.744001f **FLOATING
+C495 a_397_472# 0 17.889f **FLOATING
+C496 a_731_492# 0 2.35f **FLOATING
+C497 a_884_498# 0 2.115f **FLOATING
+C498 a_424_535# 0 1.316f **FLOATING
+C499 a_594_537# 0 1.316f **FLOATING
+C500 a_797_547# 0 1.316f **FLOATING
+C501 a_594_556# 0 1.316f **FLOATING
+C502 a_424_554# 0 1.316f **FLOATING
+C503 a_797_566# 0 1.316f **FLOATING
+C504 a_594_575# 0 1.316f **FLOATING
+C505 a_797_585# 0 1.316f **FLOATING
+C506 a_797_604# 0 1.316f **FLOATING
+C507 a_206_556# 0 18.082f **FLOATING
+C508 a_381_614# 0 17.889f **FLOATING
+C509 a_518_635# 0 18.744001f **FLOATING
+C510 a_688_664# 0 19.599f **FLOATING

@@ -57,10 +57,6 @@ Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
 
 .option scale=90n
 
-* SPICE3 file created from testing.ext - technology: scmos
-
-.option scale=1u
-
 M1000 a_445_147# g0 gnd Gnd CMOSN w=20 l=2
 +  ad=100p pd=50u as=100p ps=50u
 M1001 a_691_n240# a_615_n203# gnd Gnd CMOSN w=20 l=2
