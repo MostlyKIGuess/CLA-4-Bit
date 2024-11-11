@@ -1,30 +1,24 @@
 magic
 tech scmos
-timestamp 1731010931
+timestamp 1731315819
 << nwell >>
 rect -16 -2 8 54
 rect 17 4 41 60
-rect 56 13 80 64
+rect 56 12 80 64
 rect 93 9 117 65
 rect 126 9 150 65
-<< polysilicon >>
-rect 67 58 69 61
-rect 104 59 106 62
-rect 137 59 139 62
-rect 28 54 30 57
-rect -5 48 -3 51
-rect 67 15 69 18
-rect 28 8 30 14
-rect -5 -14 -3 8
-rect 104 -3 106 19
-rect 137 -3 139 19
-rect 35 -10 43 -8
-rect 63 -10 66 -8
-rect 80 -15 82 -11
-rect -5 -37 -3 -34
-rect 104 -26 106 -23
-rect 137 -26 139 -23
-rect 80 -38 82 -35
+<< ntransistor >>
+rect 43 -10 63 -8
+rect -5 -34 -3 -14
+rect 80 -35 82 -15
+rect 104 -23 106 -3
+rect 137 -23 139 -3
+<< ptransistor >>
+rect -5 8 -3 48
+rect 28 14 30 54
+rect 67 18 69 58
+rect 104 19 106 59
+rect 137 19 139 59
 << ndiffusion >>
 rect 43 -8 63 -7
 rect 43 -11 63 -10
@@ -47,6 +41,54 @@ rect 103 19 104 59
 rect 106 19 107 59
 rect 136 19 137 59
 rect 139 19 140 59
+<< ndcontact >>
+rect 43 -7 63 -3
+rect -10 -34 -6 -14
+rect -2 -34 2 -14
+rect 43 -15 63 -11
+rect 75 -35 79 -15
+rect 83 -35 87 -15
+rect 99 -23 103 -3
+rect 107 -23 111 -3
+rect 132 -23 136 -3
+rect 140 -23 144 -3
+<< pdcontact >>
+rect -10 8 -6 48
+rect -2 8 2 48
+rect 23 14 27 54
+rect 31 14 35 54
+rect 62 18 66 58
+rect 70 18 74 58
+rect 99 19 103 59
+rect 107 19 111 59
+rect 132 19 136 59
+rect 140 19 144 59
+<< polysilicon >>
+rect 67 58 69 61
+rect 104 59 106 62
+rect 137 59 139 62
+rect 28 54 30 57
+rect -5 48 -3 51
+rect 67 15 69 18
+rect 28 8 30 14
+rect -5 -14 -3 8
+rect 104 -3 106 19
+rect 137 -3 139 19
+rect 35 -10 43 -8
+rect 63 -10 66 -8
+rect 80 -15 82 -11
+rect -5 -37 -3 -34
+rect 104 -26 106 -23
+rect 137 -26 139 -23
+rect 80 -38 82 -35
+<< polycontact >>
+rect 27 57 31 61
+rect 65 10 71 15
+rect -9 -10 -5 -6
+rect 100 1 104 5
+rect 133 1 137 5
+rect 31 -11 35 -7
+rect 78 -11 84 -6
 << metal1 >>
 rect -24 76 66 80
 rect -24 -6 -19 76
@@ -90,52 +132,10 @@ rect -1 61 7 65
 rect 65 3 71 10
 rect 27 -3 84 3
 rect 78 -8 84 -3
-<< ntransistor >>
-rect 43 -10 63 -8
-rect -5 -34 -3 -14
-rect 80 -35 82 -15
-rect 104 -23 106 -3
-rect 137 -23 139 -3
-<< ptransistor >>
-rect -5 8 -3 48
-rect 28 14 30 54
-rect 67 18 69 58
-rect 104 19 106 59
-rect 137 19 139 59
-<< polycontact >>
-rect 27 57 31 61
-rect 65 10 71 15
-rect -9 -10 -5 -6
-rect 100 1 104 5
-rect 133 1 137 5
-rect 31 -11 35 -7
-rect 78 -11 84 -6
-<< ndcontact >>
-rect 43 -7 63 -3
-rect -10 -34 -6 -14
-rect -2 -34 2 -14
-rect 43 -15 63 -11
-rect 75 -35 79 -15
-rect 83 -35 87 -15
-rect 99 -23 103 -3
-rect 107 -23 111 -3
-rect 132 -23 136 -3
-rect 140 -23 144 -3
-<< pdcontact >>
-rect -10 8 -6 48
-rect -2 8 2 48
-rect 23 14 27 54
-rect 31 14 35 54
-rect 62 18 66 58
-rect 70 18 74 58
-rect 99 19 103 59
-rect 107 19 111 59
-rect 132 19 136 59
-rect 140 19 144 59
 << pad >>
 rect 93 65 101 72
 rect -1 54 7 61
-rect 23 -3 27 3
+rect 23 -3 28 3
 << labels >>
 rlabel metal1 -17 -10 -11 -7 3 a
 rlabel metal1 7 -10 12 -8 7 abar

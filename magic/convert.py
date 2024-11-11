@@ -11,6 +11,7 @@ def convert_spice_to_cir(input_file, output_file):
         for line in infile:
             line = line.replace('nfet', 'CMOSN')
             line = line.replace('pfet', 'CMOSP')
+            line = line.replace('**FLOATING', ' ')
             if '.option scale=' in line:
                 scale_value = line.split('=')[1].strip()
                 if scale_value not in ['90n', '0.09u']:

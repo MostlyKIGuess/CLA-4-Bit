@@ -27,35 +27,36 @@ Vdd vdd gnd 'SUPPLY'
 
 * Input Signals for delay measurement
 *  rising
-* Vclk clk gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)  
-* Va0 a0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
-* Vb0 b0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
-* Va1 a1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
-* Vb1 b1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
-* Va2 a2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-* Vb2 b2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-* Va3 a3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-* Vb3 b3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-* Vcin cin gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)
+Vclk clk gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)  
+Va0 a0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+Vb0 b0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+Va1 a1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+Vb1 b1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+Va2 a2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+Vb2 b2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+Va3 a3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+Vb3 b3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+Vcin cin gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)
 
 
 * Input Signals for delay measurement
 *  falling
-Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
-Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)                             
+* Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
+* Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+* Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+* Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+* Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+* Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)                             
 
 
-* SPICE3 file created from testing.ext - technology: scmos
 
-.option scale=90n
+
+
+.option scale=0.09u
 
 M1000 a_445_147# g0 gnd Gnd CMOSN w=20 l=2
 +  ad=100p pd=50u as=100p ps=50u
@@ -989,144 +990,145 @@ C440 w_602_n213# b2 1.128f
 C441 w_368_n246# a_303_n248# 2.162f
 C442 w_911_n3# vdd 1.128f
 C443 w_676_271# c2 1.88f
-C444 gnd 0 1.293863p 
-C445 g3 0 65.881004f 
-C446 vdd 0 0.952619p 
-C447 a_338_n335# 0 3.742f 
-C448 a_582_n389# 0 18.082f 
-C449 a_691_n378# 0 14.266f 
-C450 a_346_n310# 0 14.946f 
-C451 p3 0 0.237858p 
-C452 a_303_n382# 0 31.139002f 
-C453 a_270_n382# 0 14.266f 
-C454 a_325_n314# 0 4.916f 
-C455 b3 0 85.516f 
-C456 a3 0 0.140213p 
-C457 a_615_n341# 0 44.863f 
-C458 a_912_n157# 0 4.916f 
-C459 g2 0 63.907f 
-C460 a_338_n201# 0 3.742f 
-C461 a_582_n251# 0 18.082f 
-C462 a_691_n240# 0 14.266f 
-C463 a_346_n176# 0 14.946f 
-C464 p2 0 0.28041p 
-C465 a_303_n248# 0 31.139002f 
-C466 a_270_n248# 0 14.266f 
-C467 a_325_n180# 0 4.916f 
-C468 b2 0 85.212006f 
-C469 s3 0 3.76f 
-C470 c3 0 17.83f 
-C471 a_831_n180# 0 14.946f 
-C472 a2 0 0.137957p 
-C473 a_615_n203# 0 44.863f 
-C474 a_940_n169# 0 14.266f 
-C475 a_864_n132# 0 31.139002f 
-C476 a_899_n136# 0 3.742f 
-C477 a_896_n23# 0 4.916f 
-C478 g1 0 73.370995f 
-C479 a_337_n67# 0 3.742f 
-C480 a_579_n113# 0 18.082f 
-C481 a_688_n102# 0 14.266f 
-C482 a_345_n42# 0 14.946f 
-C483 a_302_n114# 0 31.139002f 
-C484 a_269_n114# 0 14.266f 
-C485 a_324_n46# 0 4.916f 
-C486 s2 0 3.76f 
-C487 c2 0 17.83f 
-C488 a_815_n46# 0 14.946f 
-C489 b1 0 88.200005f 
-C490 a1 0 0.140495p 
-C491 a_612_n65# 0 44.863f 
-C492 a_924_n35# 0 14.266f 
-C493 a_848_2# 0 31.139002f 
-C494 a_883_n2# 0 3.742f 
-C495 a_337_67# 0 3.742f 
-C496 a_582_25# 0 18.082f 
-C497 a_879_123# 0 4.916f 
-C498 a_691_36# 0 14.266f 
-C499 a_345_92# 0 14.946f 
-C500 a_302_20# 0 31.139002f 
-C501 a_269_20# 0 14.266f 
-C502 a_324_88# 0 4.916f 
-C503 b0 0 85.82f 
-C504 a0 0 0.144276p 
-C505 s1 0 3.76f 
-C506 c1 0 17.83f 
-C507 a_798_100# 0 14.946f 
-C508 a_615_73# 0 44.863f 
-C509 a_445_140# 0 4.888f 
-C510 a_445_147# 0 19.995f 
-C511 a_907_111# 0 14.266f 
-C512 a_831_148# 0 31.139002f 
-C513 a_866_144# 0 3.742f 
-C514 p1 0 0.380473p 
-C515 pocin 0 28.03f 
-C516 a_271_142# 0 18.082f 
-C517 a_380_153# 0 14.266f 
-C518 a_819_257# 0 4.916f 
-C519 a_496_232# 0 1.316f 
-C520 cin 0 80.576996f 
-C521 p0 0 0.200305p 
-C522 s0 0 3.76f 
-C523 a_738_234# 0 14.946f 
-C524 a_304_190# 0 44.863f 
-C525 a_496_251# 0 1.316f 
-C526 p1p0c0 0 12.624001f 
-C527 a_617_278# 0 4.888f 
-C528 p1g0 0 17.794f 
-C529 a_600_239# 0 21.439001f 
-C530 a_847_245# 0 14.266f 
-C531 a_771_282# 0 31.139002f 
-C532 a_806_278# 0 3.742f 
-C533 a_617_318# 0 2.585f 
-C534 a_453_311# 0 17.889f 
-C535 c4 0 4.324f 
-C536 p3p2p1p0c0 0 12.624001f 
-C537 a_271_280# 0 18.082f 
-C538 a_380_291# 0 14.266f 
-C539 a_610_376# 0 1.316f 
-C540 g0 0 0.141479p 
-C541 a_304_328# 0 44.863f 
-C542 a_440_393# 0 1.316f 
-C543 a_610_395# 0 1.316f 
-C544 a_883_389# 0 4.888f 
-C545 p3p2p1g0 0 18.358f 
-C546 a_825_350# 0 23.035f 
-C547 p2g1 0 12.06f 
-C548 a_610_414# 0 1.316f 
-C549 a_440_412# 0 1.316f 
-C550 a_731_417# 0 4.888f 
-C551 p2p1p0c0 0 18.358f 
-C552 a_883_429# 0 2.585f 
-C553 p3p2g1 0 30.286f 
-C554 a_693_378# 0 22.275f 
-C555 a_731_457# 0 2.585f 
-C556 p2g1g0 0 25.962f 
-C557 a_883_464# 0 2.35f 
-C558 p3g2 0 40.25f 
-C559 p2p1g0 0 4.324f 
-C560 a_218_418# 0 18.082f 
-C561 a_534_474# 0 18.744001f 
-C562 a_397_472# 0 17.889f 
-C563 a_327_429# 0 14.266f 
-C564 a_731_492# 0 2.35f 
-C565 a_884_498# 0 2.115f 
-C566 a_251_466# 0 44.863f 
-C567 a_424_535# 0 1.316f 
-C568 a_594_537# 0 1.316f 
-C569 a_797_547# 0 1.316f 
-C570 a_594_556# 0 1.316f 
-C571 a_424_554# 0 1.316f 
-C572 a_797_566# 0 1.316f 
-C573 a_594_575# 0 1.316f 
-C574 a_797_585# 0 1.316f 
-C575 a_797_604# 0 1.316f 
-C576 a_206_556# 0 18.082f 
-C577 a_315_567# 0 14.266f 
-C578 a_381_614# 0 17.889f 
-C579 a_239_604# 0 44.863f 
-C580 a_518_635# 0 18.744001f 
-C581 a_688_664# 0 19.599f 
+C444 gnd 0 1.293863p  
+C445 g3 0 65.881004f  
+C446 vdd 0 0.952619p  
+C447 a_338_n335# 0 3.742f  
+C448 a_582_n389# 0 18.082f  
+C449 a_691_n378# 0 14.266f  
+C450 a_346_n310# 0 14.946f  
+C451 p3 0 0.237858p  
+C452 a_303_n382# 0 31.139002f  
+C453 a_270_n382# 0 14.266f  
+C454 a_325_n314# 0 4.916f  
+C455 b3 0 85.516f  
+C456 a3 0 0.140213p  
+C457 a_615_n341# 0 44.863f  
+C458 a_912_n157# 0 4.916f  
+C459 g2 0 63.907f  
+C460 a_338_n201# 0 3.742f  
+C461 a_582_n251# 0 18.082f  
+C462 a_691_n240# 0 14.266f  
+C463 a_346_n176# 0 14.946f  
+C464 p2 0 0.28041p  
+C465 a_303_n248# 0 31.139002f  
+C466 a_270_n248# 0 14.266f  
+C467 a_325_n180# 0 4.916f  
+C468 b2 0 85.212006f  
+C469 s3 0 3.76f  
+C470 c3 0 17.83f  
+C471 a_831_n180# 0 14.946f  
+C472 a2 0 0.137957p  
+C473 a_615_n203# 0 44.863f  
+C474 a_940_n169# 0 14.266f  
+C475 a_864_n132# 0 31.139002f  
+C476 a_899_n136# 0 3.742f  
+C477 a_896_n23# 0 4.916f  
+C478 g1 0 73.370995f  
+C479 a_337_n67# 0 3.742f  
+C480 a_579_n113# 0 18.082f  
+C481 a_688_n102# 0 14.266f  
+C482 a_345_n42# 0 14.946f  
+C483 a_302_n114# 0 31.139002f  
+C484 a_269_n114# 0 14.266f  
+C485 a_324_n46# 0 4.916f  
+C486 s2 0 3.76f  
+C487 c2 0 17.83f  
+C488 a_815_n46# 0 14.946f  
+C489 b1 0 88.200005f  
+C490 a1 0 0.140495p  
+C491 a_612_n65# 0 44.863f  
+C492 a_924_n35# 0 14.266f  
+C493 a_848_2# 0 31.139002f  
+C494 a_883_n2# 0 3.742f  
+C495 a_337_67# 0 3.742f  
+C496 a_582_25# 0 18.082f  
+C497 a_879_123# 0 4.916f  
+C498 a_691_36# 0 14.266f  
+C499 a_345_92# 0 14.946f  
+C500 a_302_20# 0 31.139002f  
+C501 a_269_20# 0 14.266f  
+C502 a_324_88# 0 4.916f  
+C503 b0 0 85.82f  
+C504 a0 0 0.144276p  
+C505 s1 0 3.76f  
+C506 c1 0 17.83f  
+C507 a_798_100# 0 14.946f  
+C508 a_615_73# 0 44.863f  
+C509 a_445_140# 0 4.888f  
+C510 a_445_147# 0 19.995f  
+C511 a_907_111# 0 14.266f  
+C512 a_831_148# 0 31.139002f  
+C513 a_866_144# 0 3.742f  
+C514 p1 0 0.380473p  
+C515 pocin 0 28.03f  
+C516 a_271_142# 0 18.082f  
+C517 a_380_153# 0 14.266f  
+C518 a_819_257# 0 4.916f  
+C519 a_496_232# 0 1.316f  
+C520 cin 0 80.576996f  
+C521 p0 0 0.200305p  
+C522 s0 0 3.76f  
+C523 a_738_234# 0 14.946f  
+C524 a_304_190# 0 44.863f  
+C525 a_496_251# 0 1.316f  
+C526 p1p0c0 0 12.624001f  
+C527 a_617_278# 0 4.888f  
+C528 p1g0 0 17.794f  
+C529 a_600_239# 0 21.439001f  
+C530 a_847_245# 0 14.266f  
+C531 a_771_282# 0 31.139002f  
+C532 a_806_278# 0 3.742f  
+C533 a_617_318# 0 2.585f  
+C534 a_453_311# 0 17.889f  
+C535 c4 0 4.324f  
+C536 p3p2p1p0c0 0 12.624001f  
+C537 a_271_280# 0 18.082f  
+C538 a_380_291# 0 14.266f  
+C539 a_610_376# 0 1.316f  
+C540 g0 0 0.141479p  
+C541 a_304_328# 0 44.863f  
+C542 a_440_393# 0 1.316f  
+C543 a_610_395# 0 1.316f  
+C544 a_883_389# 0 4.888f  
+C545 p3p2p1g0 0 18.358f  
+C546 a_825_350# 0 23.035f  
+C547 p2g1 0 12.06f  
+C548 a_610_414# 0 1.316f  
+C549 a_440_412# 0 1.316f  
+C550 a_731_417# 0 4.888f  
+C551 p2p1p0c0 0 18.358f  
+C552 a_883_429# 0 2.585f  
+C553 p3p2g1 0 30.286f  
+C554 a_693_378# 0 22.275f  
+C555 a_731_457# 0 2.585f  
+C556 p2g1g0 0 25.962f  
+C557 a_883_464# 0 2.35f  
+C558 p3g2 0 40.25f  
+C559 p2p1g0 0 4.324f  
+C560 a_218_418# 0 18.082f  
+C561 a_534_474# 0 18.744001f  
+C562 a_397_472# 0 17.889f  
+C563 a_327_429# 0 14.266f  
+C564 a_731_492# 0 2.35f  
+C565 a_884_498# 0 2.115f  
+C566 a_251_466# 0 44.863f  
+C567 a_424_535# 0 1.316f  
+C568 a_594_537# 0 1.316f  
+C569 a_797_547# 0 1.316f  
+C570 a_594_556# 0 1.316f  
+C571 a_424_554# 0 1.316f  
+C572 a_797_566# 0 1.316f  
+C573 a_594_575# 0 1.316f  
+C574 a_797_585# 0 1.316f  
+C575 a_797_604# 0 1.316f  
+C576 a_206_556# 0 18.082f  
+C577 a_315_567# 0 14.266f  
+C578 a_381_614# 0 17.889f  
+C579 a_239_604# 0 44.863f  
+C580 a_518_635# 0 18.744001f  
+C581 a_688_664# 0 19.599f  
+
 
 
 
@@ -1139,25 +1141,25 @@ C581 a_688_664# 0 19.599f
 
 
 * * RISING DELAY MEASUREMENT
-* * Measure the delay for the final carry-out signal (C4)
-* .measure tran delay_C4 TRIG V(a0) VAL=0.9 RISE=1 TARG V(c4) VAL=0.9 RISE=1
+* Measure the delay for the final carry-out signal (C4)
+.measure tran delay_C4 TRIG V(a0) VAL=0.9 RISE=1 TARG V(c4) VAL=0.9 RISE=1
 
-* * Measure the delay for each sum signal
-* .measure tran delay_S0 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s0) VAL=0.9 RISE=1
-* .measure tran delay_S1 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s1) VAL=0.9 RISE=1
-* .measure tran delay_S2 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s2) VAL=0.9 RISE=1
-* .measure tran delay_S3 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s3) VAL=0.9 RISE=1
+* Measure the delay for each sum signal
+.measure tran delay_S0 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s0) VAL=0.9 RISE=1
+.measure tran delay_S1 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s1) VAL=0.9 RISE=1
+.measure tran delay_S2 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s2) VAL=0.9 RISE=1
+.measure tran delay_S3 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s3) VAL=0.9 RISE=1
 
 
 * FALLING DELAY MEASUREMENT
 * Measure the delay for the final carry-out signal (C4)
-.measure tran delay_C4 TRIG V(a0) VAL=0.1 FALL=1 TARG V(c4) VAL=0.1 FALL=1
+* .measure tran delay_C4 TRIG V(a0) VAL=0.1 FALL=1 TARG V(c4) VAL=0.1 FALL=1
 
-* Measure the delay for each sum signal
-.measure tran delay_S0 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s0) VAL=0.1 FALL=1
-.measure tran delay_S1 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s1) VAL=0.1 FALL=1
-.measure tran delay_S2 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s2) VAL=0.1 FALL=1
-.measure tran delay_S3 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s3) VAL=0.1 FALL=1
+* * Measure the delay for each sum signal
+* .measure tran delay_S0 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s0) VAL=0.1 FALL=1
+* .measure tran delay_S1 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s1) VAL=0.1 FALL=1
+* .measure tran delay_S2 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s2) VAL=0.1 FALL=1
+* .measure tran delay_S3 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s3) VAL=0.1 FALL=1
 
 
 

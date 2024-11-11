@@ -19,5 +19,5 @@
     Mp3 ybar c vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
     Mn1 ybar a d gnd CMOSN L={2*LAMBDA} W={3*width_N} AS={5*3*width_N*LAMBDA} PS={10*LAMBDA+2*3*width_N} AD={5*3*width_N*LAMBDA} PD={10*LAMBDA+2*3*width_N}
     Mn2 d b e gnd CMOSN L={2*LAMBDA} W={3*width_N} AS={5*3*width_N*LAMBDA} PS={10*LAMBDA+2*3*width_N} AD={5*3*width_N*LAMBDA} PD={10*LAMBDA+2*3*width_N}
-    Mn3 e c y gnd CMOSN L={2*LAMBDA} W={3*width_N} AS={5*3*width_N*LAMBDA} PS={10*LAMBDA+2*3*width_N} AD={5*3*width_N*LAMBDA} PD={10*LAMBDA+2*3*width_N}
+    Mn3 e c gnd gnd CMOSN L={2*LAMBDA} W={3*width_N} AS={5*3*width_N*LAMBDA} PS={10*LAMBDA+2*3*width_N} AD={5*3*width_N*LAMBDA} PD={10*LAMBDA+2*3*width_N}
 .ends and3

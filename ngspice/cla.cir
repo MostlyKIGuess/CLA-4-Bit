@@ -22,7 +22,7 @@
 Vdd vdd gnd 'SUPPLY'
 
 * Input Signals
-* * for testing
+* for testing
 * Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
 * Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
 * Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
@@ -36,30 +36,30 @@ Vdd vdd gnd 'SUPPLY'
 
 * Input Signals for delay measurement
 *  rising
-Vclk clk gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)  
-Va0 a0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
-Vb0 b0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
-Va1 a1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
-Vb1 b1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
-Va2 a2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-Vb2 b2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-Va3 a3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-Vb3 b3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
-Vcin cin gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)
+* Vclk clk gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)  
+* Va0 a0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+* Vb0 b0 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)     
+* Va1 a1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+* Vb1 b1 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)    
+* Va2 a2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vb2 b2 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Va3 a3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vb3 b3 gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)   
+* Vcin cin gnd PULSE(0 'SUPPLY' 10ns 0.01n 0.01n 10n 20n)
 
 
 * Input Signals for delay measurement
 *  falling
-* Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
-* Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-* Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-* Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-* Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-* Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-* Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-* Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-* Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-* Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
+Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
+Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
 
 
 
@@ -143,24 +143,24 @@ Xadder a0 b0 a1 b1 a2 b2 a3 b3 cin c4 c3 c2 c1 s0 s1 s2 s3 g0 g1 g2 g3 p0 p1 p2 
 
 * RISING DELAY MEASUREMENT
 * Measure the delay for the final carry-out signal (C4)
-.measure tran delay_C4 TRIG V(a0) VAL=0.9 RISE=1 TARG V(c4) VAL=0.9 RISE=1
+* .measure tran delay_C4 TRIG V(a0) VAL=0.9 RISE=1 TARG V(c4) VAL=0.9 RISE=1
 
-* Measure the delay for each sum signal
-.measure tran delay_S0 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s0) VAL=0.9 RISE=1
-.measure tran delay_S1 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s1) VAL=0.9 RISE=1
-.measure tran delay_S2 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s2) VAL=0.9 RISE=1
-.measure tran delay_S3 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s3) VAL=0.9 RISE=1
+* * Measure the delay for each sum signal
+* .measure tran delay_S0 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s0) VAL=0.9 RISE=1
+* .measure tran delay_S1 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s1) VAL=0.9 RISE=1
+* .measure tran delay_S2 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s2) VAL=0.9 RISE=1
+* .measure tran delay_S3 TRIG V(a0) VAL=0.9 RISE=1 TARG V(s3) VAL=0.9 RISE=1
 
 
 * * FALLING DELAY MEASUREMENT
 * * Measure the delay for the final carry-out signal (C4)
-* .measure tran delay_C4 TRIG V(a0) VAL=0.1 FALL=1 TARG V(c4) VAL=0.1 FALL=1
+.measure tran delay_C4 TRIG V(a0) VAL=0.1 FALL=1 TARG V(c4) VAL=0.1 FALL=1
 
-* * Measure the delay for each sum signal
-* .measure tran delay_S0 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s0) VAL=0.1 FALL=1
-* .measure tran delay_S1 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s1) VAL=0.1 FALL=1
-* .measure tran delay_S2 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s2) VAL=0.1 FALL=1
-* .measure tran delay_S3 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s3) VAL=0.1 FALL=1
+* Measure the delay for each sum signal
+.measure tran delay_S0 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s0) VAL=0.1 FALL=1
+.measure tran delay_S1 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s1) VAL=0.1 FALL=1
+.measure tran delay_S2 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s2) VAL=0.1 FALL=1
+.measure tran delay_S3 TRIG V(a0) VAL=0.1 FALL=1 TARG V(s3) VAL=0.1 FALL=1
 
 
 
@@ -188,7 +188,7 @@ Xadder a0 b0 a1 b1 a2 b2 a3 b3 cin c4 c3 c2 c1 s0 s1 s2 s3 g0 g1 g2 g3 p0 p1 p2 
   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
     plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+s0 22+s1 24+s2 26+s3   
         plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+c3 22+c2 24+c1 26+cin 
-
+  * plot g3 2+p3g2 4+p3p2g1 6+p3p2p1g0 8+p3p2p1p0c0 10+c4
 
   * plot s0 2+s1 4+s2 6+s3    
 
