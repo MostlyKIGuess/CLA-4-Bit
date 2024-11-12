@@ -16,37 +16,37 @@ node "w_126_9#" 2168 1349.91 126 9 nw 0 0 0 0 1344 160 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_93_9#" 2168 1349.91 93 9 nw 0 0 0 0 1344 160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_17_4#" 2168 1349.91 17 4 nw 0 0 0 0 1344 160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n16_n2#" 2168 1349.91 -16 -2 nw 0 0 0 0 1344 160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "w_93_9#" "ybar" 13.2158
-cap "gnd" "y" 206.19
-cap "a" "vdd" 103.786
-cap "w_17_4#" "b" 8.45147
-cap "w_n16_n2#" "abar" 13.2158
-cap "vdd" "y-d" 17.9973
-cap "y" "w_126_9#" 13.2158
-cap "w_17_4#" "y-d" 19.5258
-cap "y" "vdd" 439.883
-cap "w_126_9#" "vdd" 8.45147
-cap "w_n16_n2#" "a" 28.034
-cap "w_93_9#" "y-d" 26.9071
-cap "gnd" "ybar" 248.155
+cap "abar" "a" 60.7975
 cap "w_17_4#" "vdd" 0.613451
-cap "abar" "b" 1.37165
-cap "y-d" "ybar" 60.7975
-cap "a" "abar" 60.7975
-cap "gnd" "abar" 206.19
-cap "w_93_9#" "vdd" 8.50691
-cap "w_n16_n2#" "vdd" 8.60024
-cap "abar" "y-d" 3.75249
-cap "y" "ybar" 60.7975
-cap "w_126_9#" "ybar" 26.9071
-cap "vdd" "ybar" 441.416
-cap "b" "y-d" 740.337
-cap "gnd" "a" 42.2865
-cap "abar" "vdd" 439.891
-cap "a" "y-d" 1.37099
+cap "vdd" "b" 19.841
 cap "gnd" "y-d" 248.155
-cap "b" "vdd" 19.841
+cap "w_93_9#" "vdd" 8.50691
+cap "ybar" "y-d" 60.7975
+cap "vdd" "y" 439.883
+cap "vdd" "a" 103.786
+cap "w_17_4#" "y-d" 19.5258
+cap "w_n16_n2#" "a" 28.034
+cap "y-d" "b" 740.337
+cap "w_126_9#" "vdd" 8.45147
+cap "w_93_9#" "y-d" 26.9071
+cap "y-d" "a" 1.37099
+cap "gnd" "ybar" 248.155
+cap "gnd" "y" 206.19
+cap "gnd" "a" 42.2865
+cap "w_17_4#" "b" 8.45147
+cap "w_93_9#" "ybar" 13.2158
+cap "ybar" "y" 60.7975
+cap "w_126_9#" "ybar" 26.9071
+cap "vdd" "abar" 439.891
+cap "abar" "w_n16_n2#" 13.2158
+cap "w_126_9#" "y" 13.2158
+cap "abar" "y-d" 3.75249
+cap "vdd" "w_n16_n2#" 8.60024
+cap "vdd" "y-d" 17.9973
+cap "gnd" "abar" 206.19
 cap "w_17_4#" "abar" 26.7944
+cap "abar" "b" 1.37165
+cap "ybar" "vdd" 441.416
 fet nfet 137 -23 138 -22 40 44 "Gnd!" "ybar" 4 0 "gnd" 20 100,50 "y" 20 100,50
 fet nfet 104 -23 105 -22 40 44 "Gnd!" "y-d" 4 0 "gnd" 20 100,50 "ybar" 20 100,50
 fet nfet -5 -34 -4 -33 40 44 "Gnd!" "a" 4 0 "gnd" 20 100,50 "abar" 20 100,50

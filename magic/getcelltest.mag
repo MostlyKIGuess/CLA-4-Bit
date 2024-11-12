@@ -1,0 +1,17 @@
+magic
+tech scmos
+timestamp 1731433361
+<< metal1 >>
+rect -27 41 4 45
+<< metal2 >>
+rect 79 -9 87 111
+<< pad >>
+rect 79 107 87 114
+use and  and_0
+timestamp 1731006496
+transform 1 0 24 0 1 51
+box -24 -51 152 84
+<< labels >>
+rlabel metal2 82 -5 82 -5 1 an2
+rlabel metal1 -18 44 -18 44 1 an1
+<< end >>

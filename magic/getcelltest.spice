@@ -1,0 +1,68 @@
+* NGSPICE file created from getcelltest.ext - technology: scmos
+
+.option scale=90n
+
+.global Vdd Gnd 
+
+.subckt and vdd b a gnd y-d abar
+M1000 abar a vdd w_n16_n2# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1001 y ybar gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1002 y-d abar gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1003 ybar y-d gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1004 y ybar vdd w_126_9# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1005 y-d a b Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1006 abar a gnd Gnd nfet w=20 l=2
++  ad=100p pd=50u as=100p ps=50u
+M1007 ybar y-d vdd w_93_9# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+M1008 y-d abar b w_17_4# pfet w=40 l=2
++  ad=0.2n pd=90u as=0.2n ps=90u
+C0 ybar y 0.060798f
+C1 abar vdd 0.439891f
+C2 y w_126_9# 0.013216f
+C3 vdd y-d 0.017997f
+C4 b abar 0.001372f
+C5 b y-d 0.740337f
+C6 a w_n16_n2# 0.028034f
+C7 ybar w_93_9# 0.013216f
+C8 abar w_17_4# 0.026794f
+C9 w_17_4# y-d 0.019526f
+C10 w_n16_n2# vdd 0.0086f
+C11 w_93_9# y-d 0.026907f
+C12 a vdd 0.103786f
+C13 b vdd 0.019841f
+C14 w_17_4# vdd 6.13e-19
+C15 vdd y 0.439883f
+C16 ybar gnd 0.248155f
+C17 b w_17_4# 0.008451f
+C18 w_93_9# vdd 0.008507f
+C19 abar gnd 0.20619f
+C20 gnd y-d 0.248155f
+C21 ybar w_126_9# 0.026907f
+C22 ybar y-d 0.060798f
+C23 abar y-d 0.003752f
+C24 a gnd 0.042287f
+C25 abar w_n16_n2# 0.013216f
+C26 y gnd 0.20619f
+C27 ybar vdd 0.441416f
+C28 vdd w_126_9# 0.008451f
+C29 a abar 0.060798f
+C30 a y-d 0.001371f
+.ends
+
+
+* Top level circuit getcelltest
+
+Xand_0 and_0/vdd an2 an1 and_0/gnd and_0/y-d and_0/abar and
+C0 an2 and_0/y-d 0.028458f
+C1 an2 and_0/gnd 0.071924f
+C2 an2 and_0/abar 0.0019f
+C3 an2 and_0/vdd 0.016812f
+.end
+

@@ -1,0 +1,16 @@
+timestamp 1731433361
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use and and_0 1 0 24 0 1 51
+node "an2" 1 1597.97 79 -9 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 960 256 0 0 0 0 0 0 56 30
+node "an1" 1 109.312 -27 41 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 124 70 0 0 0 0 0 0 0 0 0 0
+cap "an2" "and_0/abar" 1.90049
+cap "an2" "and_0/gnd" 71.9242
+cap "an2" "and_0/y-d" 27.6818
+cap "and_0/b" "and_0/vdd" 16.8122
+cap "and_0/y-d" "and_0/b" 0.776394
+merge "and_0/a" "an1" -21.0864 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0 0 0 0 0 0 0
+merge "and_0/b" "an2" -42.5869 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
