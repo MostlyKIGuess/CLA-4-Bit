@@ -2,11 +2,11 @@ import sys
 
 def convert_spice_to_cir(input_file, output_file):
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
-        outfile.write(".include TSMC_180nm.txt\n")
-        outfile.write(".param SUPPLY=1.8\n")
-        outfile.write(".global gnd vdd\n\n")
-        outfile.write("* Supply\n")
-        outfile.write("Vdd vdd gnd 'SUPPLY'\n\n")
+        # outfile.write(".include TSMC_180nm.txt\n")
+        # outfile.write(".param SUPPLY=1.8\n")
+        # outfile.write(".global gnd vdd\n\n")
+        # outfile.write("* Supply\n")/
+        # outfile.write("Vdd vdd gnd 'SUPPLY'\n\n")
         
         for line in infile:
             line = line.replace('nfet', 'CMOSN')
