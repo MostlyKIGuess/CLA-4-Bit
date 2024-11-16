@@ -34,3 +34,8 @@
     M16 q qbar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
 
 .ends dff
+
+
+
+
+

@@ -12,7 +12,7 @@ Vdd vdd gnd 'SUPPLY'
 
 * Test Signals
 Vclk clk gnd PULSE(0 'SUPPLY' 0 1n 1n 10n 20n)
-Vd d_in gnd PULSE(0 'SUPPLY' 10n 1n 1n 10n 40n)
+Vd d gnd PULSE(0 'SUPPLY' 10n 1n 1n 10n 40n)
 
 
 * * D Flip-Flop Subcircuit using TSPC (5 transistor neg edge)
@@ -32,31 +32,30 @@ Vd d_in gnd PULSE(0 'SUPPLY' 10n 1n 1n 10n 40n)
 
 
 * D Flip-Flop Subcircuit using TSPC (12 transistor pos edge)
-.subckt dff d clk q qbar vdd gnd
+* .subckt dff d clk q qbar vdd gnd
     * stage 1
     M1 a d vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
     M2 a clk b vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
     M3 b d gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
     * stage 2
-    M4 c b vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M5 c clk e vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M6 e b gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    M4 vdd clk e vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    M5 e b c gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    M6 c clk gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
     * stage 3
-    M7 f e vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M8 f clk g gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    M7 vdd e qbar vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    M8 qbar clk g gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
     M9 g e gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
     * stage 4
-    M10 q_distorted f vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M11 q_distorted g h gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
-    M12 h f gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    M10 q qbar vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    M11 q qbar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
 
-    * buffer 
-    M13 qbar q_distorted vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M14 qbar q_distorted gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
-    M15 q qbar vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
-    M16 q qbar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    * * buffer 
+    * M13 qbar q_distorted vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    * M14 qbar q_distorted gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+    * M15 q qbar vdd vdd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+    * M16 q qbar gnd gnd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
 
-.ends dff
+* .ends dff
 
 .subckt buffer in out vdd gnd
 
@@ -68,7 +67,7 @@ M4 out inbar gnd gnd CMOSN L={LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*L
 .ends buffer
 
 * Instantiate the D Flip-Flop
-Xdff0 d_in clk q  qbar vdd gnd dff
+* Xdff0 d_in clk q  qbar vdd gnd dff
 
 * Xbuffer1 q q_actual vdd gnd buffer
 
@@ -83,10 +82,10 @@ Xdff0 d_in clk q  qbar vdd gnd dff
   set color6 = magenta
   set color7 = cyan
   tran 1n 200n
-  plot clk d_in+2 q+4 qbar+6
+  plot clk d+2 q+4 qbar+6  Z
   * Measure propagation delay from D to Q_actual
-  meas tran tpd_d_q_actual_rise TRIG v(d_in) VAL=0.9 RISE=1 TARG v(q) VAL=0.9 RISE=1
-  meas tran tpd_d_q_actual_fall TRIG v(d_in) VAL=0.9 FALL=1 TARG v(q) VAL=0.9 FALL=1
+  meas tran tpd_d_q_actual_rise TRIG v(d) VAL=0.9 RISE=1 TARG v(q) VAL=0.9 RISE=1
+  meas tran tpd_d_q_actual_fall TRIG v(d) VAL=0.9 FALL=1 TARG v(q) VAL=0.9 FALL=1
   let delay_d_q_actual = abs((tpd_d_q_actual_rise + tpd_d_q_actual_fall)/2)
   print delay_d_q_actual
 
@@ -96,8 +95,8 @@ Xdff0 d_in clk q  qbar vdd gnd dff
   print tr_q_actual tf_q_actual
 
   * Measure setup and hold times
-  meas tran t_setup TRIG v(clk) VAL=0.9 RISE=1 TARG v(d_in) VAL=0.9 FALL=1
-  meas tran t_hold TRIG v(clk) VAL=0.9 RISE=1 TARG v(d_in) VAL=0.9 RISE=1
+  meas tran t_setup TRIG v(clk) VAL=0.9 RISE=1 TARG v(d) VAL=0.9 FALL=1
+  meas tran t_hold TRIG v(clk) VAL=0.9 RISE=1 TARG v(d) VAL=0.9 RISE=1
   print t_setup t_hold
 .endc
 .end
