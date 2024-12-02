@@ -11,8 +11,10 @@
 Vdd vdd gnd 'SUPPLY'
 
 * Test Signals
-Vclk clk gnd PULSE(0 'SUPPLY' 0 1n 1n 10n 20n)
-Vd d gnd PULSE(0 'SUPPLY' 10n 1n 1n 10n 40n)
+.param delay_param = 0.1ps
+.param d_delay = 10n + delay_param
+Vclk clk gnd PULSE(0 'SUPPLY' 0 0.001n 0.001n 10n 20n)
+Vd d gnd PULSE(0 'SUPPLY' 'd_delay' 0.001n 0.001n 10n 40n) 
 
 
 * * D Flip-Flop Subcircuit using TSPC (5 transistor neg edge)
@@ -71,6 +73,7 @@ M4 out inbar gnd gnd CMOSN L={LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*L
 
 * Xbuffer1 q q_actual vdd gnd buffer
 
+.measure tran tclktoq TRIG v(clk) VAL='SUPPLY/2' RISE=1 TARG v(q) VAL='SUPPLY/2' RISE=1
 .control
   set hcopypscolor = 1
   set color0 = white
@@ -81,22 +84,10 @@ M4 out inbar gnd gnd CMOSN L={LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*L
   set color5 = brown
   set color6 = magenta
   set color7 = cyan
-  tran 1n 200n
-  plot clk d+2 q+4 qbar+6  Z
-  * Measure propagation delay from D to Q_actual
-  meas tran tpd_d_q_actual_rise TRIG v(d) VAL=0.9 RISE=1 TARG v(q) VAL=0.9 RISE=1
-  meas tran tpd_d_q_actual_fall TRIG v(d) VAL=0.9 FALL=1 TARG v(q) VAL=0.9 FALL=1
-  let delay_d_q_actual = abs((tpd_d_q_actual_rise + tpd_d_q_actual_fall)/2)
-  print delay_d_q_actual
+  tran 0.001n 40n
+  plot clk d+2 q+4 qbar+6
 
-  * Measure rise and fall times of Q_actual
-  meas tran tr_q_actual TRIG v(q) VAL=0.9 RISE=1 TARG v(q) VAL=1.8 RISE=1
-  meas tran tf_q_actual TRIG v(q) VAL=1.8 FALL=1 TARG v(q) VAL=0.9 FALL=1
-  print tr_q_actual tf_q_actual
 
-  * Measure setup and hold times
-  meas tran t_setup TRIG v(clk) VAL=0.9 RISE=1 TARG v(d) VAL=0.9 FALL=1
-  meas tran t_hold TRIG v(clk) VAL=0.9 RISE=1 TARG v(d) VAL=0.9 RISE=1
-  print t_setup t_hold
+  
 .endc
 .end

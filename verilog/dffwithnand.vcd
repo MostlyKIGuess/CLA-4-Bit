@@ -1,0 +1,166 @@
+$date
+	Wed Nov 20 15:14:24 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_dff $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # d $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 $ clk_n $end
+$var wire 1 # d $end
+$var wire 1 ! q $end
+$var wire 1 % q_latch_out $end
+$var wire 1 & d_latch_out $end
+$scope module master_latch $end
+$var wire 1 $ clk $end
+$var wire 1 # d $end
+$var wire 1 ' nand1_out $end
+$var wire 1 ( nand2_out $end
+$var wire 1 ) nand3_out $end
+$var wire 1 * nand4_out $end
+$var wire 1 & q $end
+$upscope $end
+$scope module slave_latch $end
+$var wire 1 " clk $end
+$var wire 1 & d $end
+$var wire 1 + nand1_out $end
+$var wire 1 , nand2_out $end
+$var wire 1 - nand3_out $end
+$var wire 1 . nand4_out $end
+$var wire 1 % q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x.
+x-
+x,
+x+
+x*
+x)
+1(
+1'
+x&
+x%
+0$
+0#
+1"
+x!
+$end
+#5
+0*
+1&
+1)
+0(
+1$
+1+
+1,
+0"
+#8
+0&
+0)
+1(
+1*
+0'
+1#
+#10
+0.
+1'
+1!
+1%
+1-
+0$
+0,
+1"
+#15
+0&
+0)
+0'
+1(
+1$
+1,
+0"
+#16
+0*
+1&
+1)
+0(
+1'
+0#
+#20
+0!
+0%
+0-
+1(
+1.
+0$
+0+
+1,
+1"
+#24
+1#
+#25
+0&
+0)
+1*
+0'
+1(
+1$
+1+
+0"
+#30
+0.
+1'
+1!
+1%
+1-
+0$
+0,
+1"
+#32
+0#
+#35
+0*
+1&
+1)
+0(
+1$
+1,
+0"
+#40
+0!
+0%
+0-
+1(
+1.
+0$
+0+
+1,
+1"
+#45
+0(
+1$
+1+
+0"
+#50
+1(
+0!
+0%
+0-
+0$
+0+
+1,
+1"
+#52

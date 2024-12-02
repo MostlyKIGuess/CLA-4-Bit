@@ -1,0 +1,96 @@
+.include dffmodular.cir
+.include clamodular.cir
+.include TSMC_180nm.txt
+
+.param SUPPLY=1.8
+.param LAMBDA=0.09u
+.param width_P={40*LAMBDA}
+.param width_N={20*LAMBDA}
+.global gnd vdd
+
+
+
+
+* Power Supply for the circuit
+Vdd vdd gnd 'SUPPLY'
+
+* Input Signals
+* * for testing
+Vclk clk gnd PULSE(0 'SUPPLY' 4n 0.01n 0.01n 4n 8n)  
+Va0 a0_in gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+Vb0 b0_in gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
+Va1 a1_in gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 10n 20n)    
+Vb1 b1_in gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 30n 60n)    
+Va2 a2_in gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 10n 20n)   
+Vb2 b2_in gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 30n 60n)   
+Va3 a3_in gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 10n 20n)   
+Vb3 b3_in gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 30n 60n)   
+Vcin cin_in gnd DC 0         
+
+
+.subckt inv in out vdd gnd
+M1 out in vdd vdd CMOSN L={2*LAMBDA} W={width_N} AS={5*width_N*LAMBDA} PS={10*LAMBDA+2*width_N} AD={5*width_N*LAMBDA} PD={10*LAMBDA+2*width_N}
+M2 out in gnd gnd CMOSP L={2*LAMBDA} W={width_P} AS={5*width_P*LAMBDA} PS={10*LAMBDA+2*width_P} AD={5*width_P*LAMBDA} PD={10*LAMBDA+2*width_P}
+
+.ends inv
+
+
+* Circuit Description
+Xdff0 a0_in  clk a0 a0bar vdd gnd dff
+Xdff1 a1_in  clk a1 a1bar vdd gnd dff
+Xdff2 a2_in clk a2 a2bar vdd gnd dff
+Xdff3 a3_in clk a3 a3bar vdd gnd dff
+Xdff4 b0_in clk b0 b0bar vdd gnd dff
+Xdff5 b1_in clk b1 b1bar vdd gnd dff
+Xdff6 b2_in clk b2 b2bar vdd gnd dff
+Xdff7 b3_in clk b3 b3bar vdd gnd dff
+Xdff8 cin_in clk cin cinbar vdd gnd dff 
+Xadder a0 b0 a1 b1 a2 b2 a3 b3 cin c4_in c3 c2 c1 s0_in s1_in s2_in s3_in g0 g1 g2 g3 p0 p1 p2 p3 vdd gnd cla_4_bit
+Xdff9 c4_in clk c4 c4bar vdd gnd dff
+Xdff10 s0_in clk s0 s0bar vdd gnd dff
+Xdff11 s1_in clk s1 s1bar vdd gnd dff
+Xdff12 s2_in clk s2 s2bar vdd gnd dff
+Xdff13 s3_in clk s3 s3bar vdd gnd dff
+
+
+* loads 
+xload0 c4 c4load vdd gnd inv
+xload1 s0 s0load vdd gnd inv
+xload2 s1 s1load vdd gnd inv
+xload3 s2 s2load vdd gnd inv
+xload4 s3 s3load vdd gnd inv
+
+
+
+* Simulation Commands
+* The .control section performs a transient analysis and plots the results.
+.control
+  set hcopypscolor = 1             
+  set color0 = white               
+  set color1 = black               
+  set color2 = red                 
+  set color3 = blue                
+  set color4 = coral               
+  set color5 = brown    
+  set color6 = cyan
+  set color7 = chocolate   
+  set color8 = chocolate
+  set color9 = blueviolet
+  set color10 = cadetblue
+  * for testing        
+  tran 1n 160n
+  * for delay  
+  * tran 0.001n 20n 
+*   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+g0 20+g1 22+g2 24+g3   
+*   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+p0 20+p1 22+p2 24+p3                      
+*   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
+*     plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+s0 22+s1 24+s2 26+s3   
+*         plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+c3 22+c2 24+c1 26+cin 
+
+  plot a0_in 2+a1_in 4+a2_in 6+a3_in 8+b0_in 10+b1_in 12+b2_in 14+b3_in 16+cin_in  18+c4 20+s0 22+s1 24+s2 26+s3 28+clk  
+  plot s0 2+s1 4+s2 6+s3 8+c4   10+clk
+
+.endc
+
+
+.end

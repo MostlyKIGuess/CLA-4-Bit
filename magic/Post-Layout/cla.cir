@@ -14,30 +14,30 @@ Vdd vdd gnd 'SUPPLY'
 
 * Input Signals
 * for testing
-* Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
-* Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-* Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
-* Va1 a1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 10n 20n)    
-* Vb1 b1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 30n 60n)    
-* Va2 a2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 10n 20n)   
-* Vb2 b2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 30n 60n)   
-* Va3 a3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 10n 20n)   
-* Vb3 b3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 30n 60n)   
-* Vcin cin gnd DC 0         
+Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
+Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
+Va1 a1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 10n 20n)    
+Vb1 b1 gnd PULSE(0 'SUPPLY' 5n 0.01n 0.01n 30n 60n)    
+Va2 a2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 10n 20n)   
+Vb2 b2 gnd PULSE(0 'SUPPLY' 10n 0.01n 0.01n 30n 60n)   
+Va3 a3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 10n 20n)   
+Vb3 b3 gnd PULSE(0 'SUPPLY' 15n 0.01n 0.01n 30n 60n)   
+Vcin cin gnd DC 0         
 
 * Input Signals for delay measurement
 
 *  falling and rising
-Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
-Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
-Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
-Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
-Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
+* Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
+* Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+* Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
+* Va1 a1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+* Vb1 b1 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)    
+* Va2 a2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vb2 b2 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Va3 a3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
+* Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
 
 
 
@@ -1794,9 +1794,11 @@ C1255 w_193_588# 0 1.34991f $
   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+p0 20+p1 22+p2 24+p3                      
   * plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
     plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+s0 22+s1 24+s2 26+s3   
-    plot pocin 2+g0 4+c1
+    plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+c3 22+c2 24+c1 26+cin 
+
+    * plot pocin 2+g0 4+c1
     * plot g3 2+p3g2 4+p3p2g1 6+p3p2p1g0 8+p3p2p1p0c0 10+c4 
-    plot c1 2+p1 4+s1
-  plot s0 2+s1 4+s2 6+s3    
+    * plot c1 2+p1 4+s1
+  * plot s0 2+s1 4+s2 6+s3    
         
 .endc

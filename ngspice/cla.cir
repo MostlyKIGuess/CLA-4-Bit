@@ -22,7 +22,7 @@
 Vdd vdd gnd 'SUPPLY'
 
 * Input Signals
-* * for testing
+* for testing
 * Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
 * Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
 * Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 30n 60n)     
@@ -61,7 +61,7 @@ Vdd vdd gnd 'SUPPLY'
 * Vb3 b3 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)   
 * Vcin cin gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)
 
-*  falling and rising
+* *  falling and rising
 Vclk clk gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)  
 Va0 a0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
 Vb0 b0 gnd PULSE(0 'SUPPLY' 0 0.01n 0.01n 10n 20n)     
@@ -208,12 +208,12 @@ Xsum3 p3 c3 s3 vdd gnd xor
   set color9 = blueviolet
   set color10 = cadetblue
   * for testing        
-  tran 1n 160n
+  * tran 1n 160n
   * for delay  
-  * tran 0.001n 20n 
+  tran 0.001n 20n 
   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+g0 20+g1 22+g2 24+g3   
   plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+p0 20+p1 22+p2 24+p3                      
-  plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
+  * plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+s0 20+s1 22+s2 24+s3                      
     plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+s0 22+s1 24+s2 26+s3   
         plot a0 2+a1 4+a2 6+a3 8+b0 10+b1 12+b2 14+b3 16+cin 18+c4 20+c3 22+c2 24+c1 26+cin 
   * plot g3 2+p3g2 4+p3p2g1 6+p3p2p1g0 8+p3p2p1p0c0 10+c4
